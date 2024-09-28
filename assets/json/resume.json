@@ -1,200 +1,497 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Zhen Zhu",
+    "label": "Final-year CS Ph.D Candidate",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "zhenzhu4@illinois.edu",
+    "phone": "+12172000253",
+    "url": "https://zzhu.vision",
+    "summary": "A final-year CS Ph.D. candidate at the University of Illinois at Urbana-Champaign (UIUC), specializing in building intelligent systems for continual perception, recognition, understanding, and prediction. Research interests include efficient continual learning, personal AI agents, image generation, and the emerging properties of large models. Strong background in fundamental vision tasks such as object detection and semantic segmentation.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "201 N. Goodwin Avenue, MC-258",
+      "postalCode": "61801",
+      "city": "Urbana",
       "countryCode": "US",
-      "region": "California"
+      "region": "Illinois"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Google Scholar",
+        "username": "",
+        "url": "https://scholar.google.co.uk/citations?user=nD6_ot4AAAAJ&hl=en"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "zhen-zhu-8081b3203",
+        "url": "https://www.linkedin.com/in/zhen-zhu-8081b3203/"
+      },
+      {
+        "network": "Github",
+        "username": "jessemelpolio",
+        "url": "https://github.com/jessemelpolio"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "Google Inc.",
+      "position": "Research Intern",
+      "url": "https://google.com",
+      "startDate": "2024-05-01",
+      "endDate": "2024-08-31",
+      "summary": "Worked on text-to-video generation projects.",
+      "highlights": []
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Adobe Inc.",
+      "position": "Research Scientist Intern",
+      "url": "https://adobe.com",
+      "startDate": "2023-05-01",
+      "endDate": "2023-08-31",
+      "summary": "Bridged LLMs and Diffusion models to create a dynamic system for automatic and continual data generation to improve discriminative task performance. A submission is in progress.",
+      "highlights": []
+    },
+    {
+      "name": "Adobe Inc.",
+      "position": "Research Scientist Intern",
+      "url": "https://adobe.com",
+      "startDate": "2022-05-01",
+      "endDate": "2022-08-31",
+      "summary": "Created a unified GAN framework for generating multiple image analyses with RGB images simultaneously and demonstrated the model's effectiveness in generating datasets for downstream tasks such as depth and normal estimation. Paper accepted to WACV 2024.",
+      "highlights": [
+        "Paper accepted to WACV 2024"
+      ]
+    },
+    {
+      "name": "ShanghaiTech",
+      "position": "Research Assistant",
+      "url": "https://shanghaitech.edu.cn",
+      "startDate": "2020-08-01",
+      "endDate": "2020-11-30",
+      "summary": "Engaged in human novel view synthesis and hair neural rendering under the supervision of Prof. Jingyi Yu. A paper accepted to ACM MM.",
+      "highlights": [
+        "Paper accepted to ACM MM"
+      ]
     }
   ],
+  "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "University of Illinois at Urbana-Champaign, United States",
+      "location": "Urbana-Champaign, IL",
+      "url": "https://illinois.edu",
+      "area": "Computer Science",
+      "studyType": "Ph.D.",
+      "startDate": "2021-01-01",
+      "endDate": "2025-05-01",
+      "score": "",
+      "courses": [],
+      "summary": "Ph.D. student in Computer Science, Advisor: Derek Hoiem"
+    },
+    {
+      "institution": "Huazhong University of Science and Technology, China",
+      "location": "Wuhan, China",
+      "url": "https://www.hust.edu.cn",
+      "area": "Computer Vision and Deep Learning",
+      "studyType": "Master",
+      "startDate": "2017-09-01",
+      "endDate": "2020-06-01",
+      "score": "",
+      "courses": [],
+      "summary": "Master's degree in Computer Vision and Deep Learning, supervised by Prof. Xiang Bai."
+    },
+    {
+      "institution": "Huazhong University of Science and Technology, China",
+      "location": "Wuhan, China",
+      "url": "https://www.hust.edu.cn",
+      "area": "Engineering",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2013-09-01",
+      "endDate": "2017-06-01",
+      "score": "",
+      "courses": [],
+      "summary": "Bachelor of Engineering in Computer Science and Technology."
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Mavis Future Faculty Fellowship",
+      "date": "2024-08-01",
+      "awarder": "",
+      "url": "",
+      "summary": "Awarded for outstanding potential as a future faculty member."
+    },
+    {
+      "title": "National Fellowship",
+      "date": "2019-10-01",
+      "awarder": "",
+      "url": "",
+      "summary": "Received National Fellowship for academic excellence."
+    },
+    {
+      "title": "National Fellowship",
+      "date": "2018-10-01",
+      "awarder": "",
+      "url": "",
+      "summary": "Received National Fellowship for academic excellence."
+    },
+    {
+      "title": "Zhixing Outstanding Awards",
+      "date": "2019-10-01",
+      "awarder": "",
+      "url": "",
+      "summary": "Received Zhixing Outstanding Awards for exceptional performance."
+    },
+    {
+      "title": "Zhixing Outstanding Awards",
+      "date": "2018-10-01",
+      "awarder": "",
+      "url": "",
+      "summary": "Received Zhixing Outstanding Awards for exceptional performance."
+    },
+    {
+      "title": "Outstanding Graduates",
+      "date": "2017-06-01",
+      "awarder": "",
+      "url": "",
+      "summary": "Recognized as an Outstanding Graduate."
+    },
+    {
+      "title": "Golden Prize",
+      "date": "",
+      "awarder": "Fifth China \"Internet+\" College Students Innovation and Entrepreneurship Competition",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "1st place",
+      "date": "",
+      "awarder": "ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
+      "url": "https://rrc.cvc.uab.es/?ch=13&com=evaluation&task=2",
+      "summary": ""
+    },
+    {
+      "title": "1st place of students group",
+      "date": "",
+      "awarder": "ICDAR 2019 Robust Reading Challenge On ReCTS--Task 3",
+      "url": "https://rrc.cvc.uab.es/files/ICDAR2019-ReCTS.pdf",
+      "summary": ""
+    },
+    {
+      "title": "1st place at ICDAR 2019 Robusst Reading Challenge On SROIE--Task 2",
+      "date": "May 2019",
+      "awarder": "",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "1st place at ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
+      "date": "May 2019",
+      "awarder": "",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "1st place at ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
+      "date": "May 2019",
+      "awarder": "",
+      "url": "",
+      "summary": ""
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Anytime Continual Learning for Open Vocabulary Classification",
+      "publisher": "ECCV 2024",
+      "releaseDate": "2024-xx-xx",
+      "url": "",
+      "summary": "Oral presentation on Anytime Continual Learning for Open Vocabulary Classification.",
+      "authors": [
+        "Zhen Zhu",
+        "Nick Gong",
+        "Derek Hoiem"
+      ]
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Continual Learning in Open-vocabulary Classification with Complementary Memory Systems",
+      "publisher": "TMLR 2024",
+      "releaseDate": "2024-xx-xx",
+      "url": "https://openreview.net/forum?id=6j5M75iK3a&noteId=0ABvrBz6Rg",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Weijie Lyu",
+        "Yao Xiao",
+        "Derek Hoiem"
+      ]
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
+      "name": "Survey on Memory-Augmented Neural Networks: Cognitive Insights to AI Applications.",
+      "publisher": "Arxiv",
+      "releaseDate": "2023-xx-xx",
+      "url": "https://arxiv.org/pdf/2312.06141.pdf",
+      "summary": "Survey on Memory-Augmented Neural Networks with cognitive insights to AI applications.",
+      "authors": [
+        "Khosla Savya",
+        "Zhen Zhu",
+        "Yifie He"
+      ]
+    },
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+      "name": "Comparing Human Object Learning with Deep Neural Networks",
+      "publisher": "Journal of Vision",
+      "releaseDate": "2023-xx-xx",
+      "url": "https://jov.arvojournals.org/article.aspx?articleid=2791528",
+      "summary": "",
+      "authors": [
+        "Yinuo Peng",
+        "Zhen Zhu",
+        "Derek Hoiem",
+        "Ranxiao Frances Wang"
+      ]
+    },
+    {
+      "name": "SingleInsert: Inserting New Concepts from a Single Image into Text-to-Image Models for Flexible Editing",
+      "publisher": "Under review 2023",
+      "releaseDate": "2023-xx-xx",
+      "url": "https://arxiv.org/abs/2310.08094",
+      "summary": "",
+      "authors": [
+        "Zijie Wu",
+        "Chaohui Yu",
+        "Zhen Zhu",
+        "Fan Wang",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "Consistent Multimodal Generation via A Unified GAN Framework",
+      "publisher": "WACV 2024",
+      "releaseDate": "2024-xx-xx",
+      "url": "https://arxiv.org/abs/2307.01425",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Yijun Li",
+        "Weijie Lyu",
+        "Krishna Kumar Singh",
+        "Zhixin Shu",
+        "Soeren Pirk",
+        "Derek Hoiem"
+      ]
+    },
+    {
+      "name": "CCPL: Contrastive Coherence Preserving Loss for Versatile Style Transfer",
+      "publisher": "ECCV 2022",
+      "releaseDate": "2022-xx-xx",
+      "url": "https://arxiv.org/pdf/2207.04808.pdf",
+      "summary": "Joint first author on CCPL: Contrastive Coherence Preserving Loss for Versatile Style Transfer.",
+      "authors": [
+        "Zijie Wu",
+        "Zhen Zhu",
+        "Junping Du",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "MobileFaceSwap: A Lightweight Framework for Video Face Swapping",
+      "publisher": "AAAI 2022",
+      "releaseDate": "2022-xx-xx",
+      "url": "https://arxiv.org/pdf/2201.03808.pdf",
+      "summary": "",
+      "authors": [
+        "Zhiliang Xu",
+        "Zhibin Hong",
+        "Changxing Ding",
+        "Zhen Zhu",
+        "Junyu Han",
+        "Jingtuo Liu",
+        "Errui Ding"
+      ]
+    },
+    {
+      "name": "Progressive and Aligned Pose Attention Transfer for Person Image Generation",
+      "publisher": "TPAMI 2021",
+      "releaseDate": "2021-xx-xx",
+      "url": "https://arxiv.org/abs/2103.11622.pdf",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Tengteng Huang",
+        "Mengde Xu",
+        "Baoguang Shi",
+        "Wenqing Cheng",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "FaceController: Controllable Attribute Editing for Face in the Wild",
+      "publisher": "AAAI 2021",
+      "releaseDate": "2021-xx-xx",
+      "url": "https://arxiv.org/abs/2102.11464",
+      "summary": "",
+      "authors": [
+        "Zhiliang Xu",
+        "Xiyu Yu",
+        "Zhibin Hong",
+        "Zhen Zhu",
+        "Junyu Han",
+        "Jingtuo Liu",
+        "Errui Ding",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "WDNet: Watermark-Decomposition Network for Visible Watermark Removal",
+      "publisher": "WACV 2021",
+      "releaseDate": "2021-xx-xx",
+      "url": "https://openaccess.thecvf.com/content/WACV2021/html/Liu_WDNet_Watermark-Decomposition_Network_for_Visible_Watermark_Removal_WACV_2021_paper.html",
+      "summary": "",
+      "authors": [
+        "Yang Liu",
+        "Zhen Zhu",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "Semantic Flow for Fast and Accurate Scene Parsing",
+      "publisher": "ECCV 2020",
+      "releaseDate": "2020-xx-xx",
+      "url": "https://arxiv.org/abs/2002.10120",
+      "summary": "",
+      "authors": [
+        "Xiangtai Li",
+        "Ansheng You",
+        "Zhen Zhu",
+        "Houlong Zhao",
+        "Maoke Yang",
+        "Kuiyuan Yang",
+        "Yunhai Tong"
+      ]
+    },
+    {
+      "name": "Semantically Mutil-modal Image Synthesis",
+      "publisher": "CVPR 2020",
+      "releaseDate": "2020-xx-xx",
+      "url": "https://arxiv.org/abs/2003.12697",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Zhiliang Xu",
+        "Ansheng You",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "Asymmetric Non-local Neural Networks for Semantic Segmentation",
+      "publisher": "ICCV 2019",
+      "releaseDate": "2019-xx-xx",
+      "url": "https://arxiv.org/abs/1908.07678",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Mengde Xu",
+        "Song Bai",
+        "Tengteng Huang",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "Progressive Pose Attention Transfer for Person Image Generation",
+      "publisher": "CVPR 2019",
+      "releaseDate": "2019-xx-xx",
+      "url": "https://arxiv.org/abs/1904.03349",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Tengteng Huang",
+        "Baoguang Shi",
+        "Miao Yu",
+        "Bofei Wang",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "Non-stationary Texture Synthesis by Adversarial Expansion",
+      "publisher": "SIGGRAPH 2018",
+      "releaseDate": "2018-xx-xx",
+      "url": "http://vcc.szu.edu.cn/research/2018/TexSyn.html",
+      "summary": "Joint first author on Non-stationary Texture Synthesis by Adversarial Expansion.",
+      "authors": [
+        "Yang Zhou",
+        "Zhen Zhu",
+        "Xiang Bai",
+        "Dani Lischinski",
+        "Daniel Cohen-Or",
+        "Hui Huang"
+      ]
+    },
+    {
+      "name": "Feature Fusion for Scene Text Detection",
+      "publisher": "DAS 2018",
+      "releaseDate": "2018-xx-xx",
+      "url": "https://ieeexplore.ieee.org/document/8395194",
+      "summary": "",
+      "authors": [
+        "Zhen Zhu",
+        "Minghui Liao",
+        "Baoguang Shi",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "DOTA: A Large-scale Dataset for Object Detection in Aerial Images",
+      "publisher": "CVPR 2018",
+      "releaseDate": "2018-xx-xx",
+      "url": "https://captain-whu.github.io/DOTA/",
+      "summary": "",
+      "authors": [
+        "Gui-Song Xia",
+        "Xiang Bai",
+        "Jian Ding",
+        "Zhen Zhu",
+        "Serge Belongie",
+        "Jiebo Luo",
+        "Mihai Datcu",
+        "Marcello Pelillo",
+        "Liangpei Zhang"
+      ]
+    },
+    {
+      "name": "Rotation-sensitive Regression for Oriented Scene Text Detection",
+      "publisher": "CVPR 2018",
+      "releaseDate": "2018-xx-xx",
+      "url": "http://openaccess.thecvf.com/content_cvpr_2018/html/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.html",
+      "summary": "",
+      "authors": [
+        "Minghui Liao",
+        "Zhen Zhu",
+        "Baoguang Shi",
+        "Gui-song Xia",
+        "Xiang Bai"
+      ]
+    },
+    {
+      "name": "Auto-Encoder Guided GAN for Chinese Calligraphy Synthesis",
+      "publisher": "ICDAR 2017",
+      "releaseDate": "2017-xx-xx",
+      "url": "https://arxiv.org/abs/1706.08789",
+      "summary": "",
+      "authors": [
+        "Pengyuan Lyu",
+        "Xiang Bai",
+        "Cong Yao",
+        "Zhen Zhu",
+        "Tengteng Huang",
+        "Wenyu Liu"
       ]
     }
   ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+  "skills": [],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": [],
+  "volunteer": []
 }

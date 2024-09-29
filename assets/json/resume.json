@@ -4,8 +4,7 @@
     "label": "Final-year CS Ph.D Candidate",
     "image": "",
     "email": "zhenzhu4@illinois.edu",
-    "phone": "+12172000253",
-    "url": "https://zzhu.vision",
+    "website": "https://zzhu.vision",
     "summary": "A final-year CS Ph.D. candidate at the University of Illinois at Urbana-Champaign (UIUC), specializing in building intelligent systems for continual perception, recognition, understanding, and prediction. Research interests include efficient continual learning, personal AI agents, image generation, and the emerging properties of large models. Strong background in fundamental vision tasks such as object detection and semantic segmentation.",
     "location": {
       "address": "201 N. Goodwin Avenue, MC-258",
@@ -32,54 +31,9 @@
       }
     ]
   },
-  "work": [
-    {
-      "name": "Google Inc.",
-      "position": "Research Intern",
-      "url": "https://google.com",
-      "startDate": "2024-05-01",
-      "endDate": "2024-08-31",
-      "summary": "Worked on text-to-video generation projects.",
-      "highlights": []
-    },
-    {
-      "name": "Adobe Inc.",
-      "position": "Research Scientist Intern",
-      "url": "https://adobe.com",
-      "startDate": "2023-05-01",
-      "endDate": "2023-08-31",
-      "summary": "Bridged LLMs and Diffusion models to create a dynamic system for automatic and continual data generation to improve discriminative task performance. A submission is in progress.",
-      "highlights": []
-    },
-    {
-      "name": "Adobe Inc.",
-      "position": "Research Scientist Intern",
-      "url": "https://adobe.com",
-      "startDate": "2022-05-01",
-      "endDate": "2022-08-31",
-      "summary": "Created a unified GAN framework for generating multiple image analyses with RGB images simultaneously and demonstrated the model's effectiveness in generating datasets for downstream tasks such as depth and normal estimation. Paper accepted to WACV 2024.",
-      "highlights": [
-        "Paper accepted to WACV 2024"
-      ]
-    },
-    {
-      "name": "ShanghaiTech",
-      "position": "Research Assistant",
-      "url": "https://shanghaitech.edu.cn",
-      "startDate": "2020-08-01",
-      "endDate": "2020-11-30",
-      "summary": "Engaged in human novel view synthesis and hair neural rendering under the supervision of Prof. Jingyi Yu. A paper accepted to ACM MM.",
-      "highlights": [
-        "Paper accepted to ACM MM"
-      ]
-    }
-  ],
-  "volunteer": [],
   "education": [
     {
       "institution": "University of Illinois at Urbana-Champaign, United States",
-      "location": "Urbana-Champaign, IL",
-      "url": "https://illinois.edu",
       "area": "Computer Science",
       "studyType": "Ph.D.",
       "startDate": "2021-01-01",
@@ -90,8 +44,6 @@
     },
     {
       "institution": "Huazhong University of Science and Technology, China",
-      "location": "Wuhan, China",
-      "url": "https://www.hust.edu.cn",
       "area": "Computer Vision and Deep Learning",
       "studyType": "Master",
       "startDate": "2017-09-01",
@@ -102,8 +54,6 @@
     },
     {
       "institution": "Huazhong University of Science and Technology, China",
-      "location": "Wuhan, China",
-      "url": "https://www.hust.edu.cn",
       "area": "Engineering",
       "studyType": "Bachelor of Engineering",
       "startDate": "2013-09-01",
@@ -113,99 +63,12 @@
       "summary": "Bachelor of Engineering in Computer Science and Technology."
     }
   ],
-  "awards": [
-    {
-      "title": "Mavis Future Faculty Fellowship",
-      "date": "2024-08-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Awarded for outstanding potential as a future faculty member."
-    },
-    {
-      "title": "National Fellowship",
-      "date": "2019-10-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Received National Fellowship for academic excellence."
-    },
-    {
-      "title": "National Fellowship",
-      "date": "2018-10-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Received National Fellowship for academic excellence."
-    },
-    {
-      "title": "Zhixing Outstanding Awards",
-      "date": "2019-10-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Received Zhixing Outstanding Awards for exceptional performance."
-    },
-    {
-      "title": "Zhixing Outstanding Awards",
-      "date": "2018-10-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Received Zhixing Outstanding Awards for exceptional performance."
-    },
-    {
-      "title": "Outstanding Graduates",
-      "date": "2017-06-01",
-      "awarder": "",
-      "url": "",
-      "summary": "Recognized as an Outstanding Graduate."
-    },
-    {
-      "title": "Golden Prize",
-      "date": "",
-      "awarder": "Fifth China \"Internet+\" College Students Innovation and Entrepreneurship Competition",
-      "url": "",
-      "summary": ""
-    },
-    {
-      "title": "1st place",
-      "date": "",
-      "awarder": "ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
-      "url": "https://rrc.cvc.uab.es/?ch=13&com=evaluation&task=2",
-      "summary": ""
-    },
-    {
-      "title": "1st place of students group",
-      "date": "",
-      "awarder": "ICDAR 2019 Robust Reading Challenge On ReCTS--Task 3",
-      "url": "https://rrc.cvc.uab.es/files/ICDAR2019-ReCTS.pdf",
-      "summary": ""
-    },
-    {
-      "title": "1st place at ICDAR 2019 Robusst Reading Challenge On SROIE--Task 2",
-      "date": "May 2019",
-      "awarder": "",
-      "url": "",
-      "summary": ""
-    },
-    {
-      "title": "1st place at ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
-      "date": "May 2019",
-      "awarder": "",
-      "url": "",
-      "summary": ""
-    },
-    {
-      "title": "1st place at ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
-      "date": "May 2019",
-      "awarder": "",
-      "url": "",
-      "summary": ""
-    }
-  ],
-  "certificates": [],
   "publications": [
     {
       "name": "Anytime Continual Learning for Open Vocabulary Classification",
       "publisher": "ECCV 2024",
-      "releaseDate": "2024-xx-xx",
-      "url": "",
+      "releaseDate": "2024",
+      "website": "",
       "summary": "Oral presentation on Anytime Continual Learning for Open Vocabulary Classification.",
       "authors": [
         "Zhen Zhu",
@@ -216,8 +79,8 @@
     {
       "name": "Continual Learning in Open-vocabulary Classification with Complementary Memory Systems",
       "publisher": "TMLR 2024",
-      "releaseDate": "2024-xx-xx",
-      "url": "https://openreview.net/forum?id=6j5M75iK3a&noteId=0ABvrBz6Rg",
+      "releaseDate": "2024",
+      "website": "https://openreview.net/forum?id=6j5M75iK3a&noteId=0ABvrBz6Rg",
       "summary": "",
       "authors": [
         "Zhen Zhu",
@@ -229,8 +92,8 @@
     {
       "name": "Survey on Memory-Augmented Neural Networks: Cognitive Insights to AI Applications.",
       "publisher": "Arxiv",
-      "releaseDate": "2023-xx-xx",
-      "url": "https://arxiv.org/pdf/2312.06141.pdf",
+      "releaseDate": "2023",
+      "website": "https://arxiv.org/pdf/2312.06141.pdf",
       "summary": "Survey on Memory-Augmented Neural Networks with cognitive insights to AI applications.",
       "authors": [
         "Khosla Savya",
@@ -241,7 +104,7 @@
     {
       "name": "Comparing Human Object Learning with Deep Neural Networks",
       "publisher": "Journal of Vision",
-      "releaseDate": "2023-xx-xx",
+      "releaseDate": "2023",
       "url": "https://jov.arvojournals.org/article.aspx?articleid=2791528",
       "summary": "",
       "authors": [
@@ -254,7 +117,7 @@
     {
       "name": "SingleInsert: Inserting New Concepts from a Single Image into Text-to-Image Models for Flexible Editing",
       "publisher": "Under review 2023",
-      "releaseDate": "2023-xx-xx",
+      "releaseDate": "2023",
       "url": "https://arxiv.org/abs/2310.08094",
       "summary": "",
       "authors": [
@@ -268,7 +131,7 @@
     {
       "name": "Consistent Multimodal Generation via A Unified GAN Framework",
       "publisher": "WACV 2024",
-      "releaseDate": "2024-xx-xx",
+      "releaseDate": "2024",
       "url": "https://arxiv.org/abs/2307.01425",
       "summary": "",
       "authors": [
@@ -284,9 +147,9 @@
     {
       "name": "CCPL: Contrastive Coherence Preserving Loss for Versatile Style Transfer",
       "publisher": "ECCV 2022",
-      "releaseDate": "2022-xx-xx",
+      "releaseDate": "2022",
       "url": "https://arxiv.org/pdf/2207.04808.pdf",
-      "summary": "Joint first author on CCPL: Contrastive Coherence Preserving Loss for Versatile Style Transfer.",
+      "summary": "Joint first author.",
       "authors": [
         "Zijie Wu",
         "Zhen Zhu",
@@ -297,7 +160,7 @@
     {
       "name": "MobileFaceSwap: A Lightweight Framework for Video Face Swapping",
       "publisher": "AAAI 2022",
-      "releaseDate": "2022-xx-xx",
+      "releaseDate": "2022",
       "url": "https://arxiv.org/pdf/2201.03808.pdf",
       "summary": "",
       "authors": [
@@ -313,7 +176,7 @@
     {
       "name": "Progressive and Aligned Pose Attention Transfer for Person Image Generation",
       "publisher": "TPAMI 2021",
-      "releaseDate": "2021-xx-xx",
+      "releaseDate": "2021",
       "url": "https://arxiv.org/abs/2103.11622.pdf",
       "summary": "",
       "authors": [
@@ -328,7 +191,7 @@
     {
       "name": "FaceController: Controllable Attribute Editing for Face in the Wild",
       "publisher": "AAAI 2021",
-      "releaseDate": "2021-xx-xx",
+      "releaseDate": "2021",
       "url": "https://arxiv.org/abs/2102.11464",
       "summary": "",
       "authors": [
@@ -345,7 +208,7 @@
     {
       "name": "WDNet: Watermark-Decomposition Network for Visible Watermark Removal",
       "publisher": "WACV 2021",
-      "releaseDate": "2021-xx-xx",
+      "releaseDate": "2021",
       "url": "https://openaccess.thecvf.com/content/WACV2021/html/Liu_WDNet_Watermark-Decomposition_Network_for_Visible_Watermark_Removal_WACV_2021_paper.html",
       "summary": "",
       "authors": [
@@ -357,7 +220,7 @@
     {
       "name": "Semantic Flow for Fast and Accurate Scene Parsing",
       "publisher": "ECCV 2020",
-      "releaseDate": "2020-xx-xx",
+      "releaseDate": "2020",
       "url": "https://arxiv.org/abs/2002.10120",
       "summary": "",
       "authors": [
@@ -373,7 +236,7 @@
     {
       "name": "Semantically Mutil-modal Image Synthesis",
       "publisher": "CVPR 2020",
-      "releaseDate": "2020-xx-xx",
+      "releaseDate": "2020",
       "url": "https://arxiv.org/abs/2003.12697",
       "summary": "",
       "authors": [
@@ -386,7 +249,7 @@
     {
       "name": "Asymmetric Non-local Neural Networks for Semantic Segmentation",
       "publisher": "ICCV 2019",
-      "releaseDate": "2019-xx-xx",
+      "releaseDate": "2019",
       "url": "https://arxiv.org/abs/1908.07678",
       "summary": "",
       "authors": [
@@ -400,7 +263,7 @@
     {
       "name": "Progressive Pose Attention Transfer for Person Image Generation",
       "publisher": "CVPR 2019",
-      "releaseDate": "2019-xx-xx",
+      "releaseDate": "2019",
       "url": "https://arxiv.org/abs/1904.03349",
       "summary": "",
       "authors": [
@@ -415,9 +278,9 @@
     {
       "name": "Non-stationary Texture Synthesis by Adversarial Expansion",
       "publisher": "SIGGRAPH 2018",
-      "releaseDate": "2018-xx-xx",
+      "releaseDate": "2018",
       "url": "http://vcc.szu.edu.cn/research/2018/TexSyn.html",
-      "summary": "Joint first author on Non-stationary Texture Synthesis by Adversarial Expansion.",
+      "summary": "Joint first author.",
       "authors": [
         "Yang Zhou",
         "Zhen Zhu",
@@ -430,7 +293,7 @@
     {
       "name": "Feature Fusion for Scene Text Detection",
       "publisher": "DAS 2018",
-      "releaseDate": "2018-xx-xx",
+      "releaseDate": "2018",
       "url": "https://ieeexplore.ieee.org/document/8395194",
       "summary": "",
       "authors": [
@@ -443,7 +306,7 @@
     {
       "name": "DOTA: A Large-scale Dataset for Object Detection in Aerial Images",
       "publisher": "CVPR 2018",
-      "releaseDate": "2018-xx-xx",
+      "releaseDate": "2018",
       "url": "https://captain-whu.github.io/DOTA/",
       "summary": "",
       "authors": [
@@ -461,7 +324,7 @@
     {
       "name": "Rotation-sensitive Regression for Oriented Scene Text Detection",
       "publisher": "CVPR 2018",
-      "releaseDate": "2018-xx-xx",
+      "releaseDate": "2018",
       "url": "http://openaccess.thecvf.com/content_cvpr_2018/html/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.html",
       "summary": "",
       "authors": [
@@ -475,7 +338,7 @@
     {
       "name": "Auto-Encoder Guided GAN for Chinese Calligraphy Synthesis",
       "publisher": "ICDAR 2017",
-      "releaseDate": "2017-xx-xx",
+      "releaseDate": "2017",
       "url": "https://arxiv.org/abs/1706.08789",
       "summary": "",
       "authors": [
@@ -488,10 +351,142 @@
       ]
     }
   ],
+  "work": [
+    {
+      "name": "Google Inc.",
+      "position": "Research Intern",
+      "website": "https://google.com",
+      "startDate": "2024-05-01",
+      "endDate": "2024-08-31",
+      "summary": "Worked on text-to-video generation projects.",
+      "highlights": []
+    },
+    {
+      "name": "Adobe Inc.",
+      "position": "Research Scientist Intern",
+      "website": "https://adobe.com",
+      "startDate": "2023-05-01",
+      "endDate": "2023-08-31",
+      "summary": "Bridged LLMs and Diffusion models to create a dynamic system for automatic and continual data generation to improve discriminative task performance.",
+      "highlights": []
+    },
+    {
+      "name": "Adobe Inc.",
+      "position": "Research Scientist Intern",
+      "website": "https://adobe.com",
+      "startDate": "2022-05-01",
+      "endDate": "2022-08-31",
+      "summary": "Created a unified GAN framework for generating multiple image analyses with RGB images simultaneously and demonstrated the model's effectiveness in generating datasets for downstream tasks such as depth and normal estimation. Paper accepted to WACV 2024.",
+      "highlights": [
+        "Paper accepted to WACV 2024"
+      ]
+    },
+    {
+      "name": "ShanghaiTech",
+      "position": "Research Assistant",
+      "website": "https://shanghaitech.edu.cn",
+      "startDate": "2020-08-01",
+      "endDate": "2020-11-30",
+      "summary": "Engaged in human novel view synthesis and hair neural rendering under the supervision of Prof. Jingyi Yu. A paper accepted to ACM MM.",
+      "highlights": [
+        "Paper accepted to ACM MM"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "awards": [
+    {
+      "title": "Mavis Future Faculty Fellowship",
+      "date": "2024-08",
+      "awarder": "",
+      "url": "",
+      "summary": "Awarded for outstanding potential as a future faculty member."
+    },
+    {
+      "title": "National Fellowship",
+      "date": "2019-10",
+      "awarder": "",
+      "url": "",
+      "summary": "Received National Fellowship for academic excellence."
+    },
+    {
+      "title": "National Fellowship",
+      "date": "2018-10",
+      "awarder": "",
+      "url": "",
+      "summary": "Received National Fellowship for academic excellence."
+    },
+    {
+      "title": "Zhixing Outstanding Awards",
+      "date": "2019-10",
+      "awarder": "",
+      "url": "",
+      "summary": "Received Zhixing Outstanding Awards for exceptional performance."
+    },
+    {
+      "title": "Zhixing Outstanding Awards",
+      "date": "2018-10",
+      "awarder": "",
+      "url": "",
+      "summary": "Received Zhixing Outstanding Awards for exceptional performance."
+    },
+    {
+      "title": "Outstanding Graduates",
+      "date": "2017-06",
+      "awarder": "",
+      "url": "",
+      "summary": "Recognized as an Outstanding Graduate."
+    },
+    {
+      "title": "Golden Prize",
+      "date": "2019",
+      "awarder": "Fifth China \"Internet+\" College Students Innovation and Entrepreneurship Competition",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "1st place",
+      "date": "2019-05",
+      "awarder": "ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
+      "url": "https://rrc.cvc.uab.es/?ch=13&com=evaluation&task=2",
+      "summary": ""
+    },
+    {
+      "title": "1st place of students group",
+      "date": "2019-05",
+      "awarder": "ICDAR 2019 Robust Reading Challenge On ReCTS--Task 3",
+      "url": "https://rrc.cvc.uab.es/files/ICDAR2019-ReCTS.pdf",
+      "summary": ""
+    },
+    {
+      "title": "1st place at ICDAR 2019 Robusst Reading Challenge On SROIE--Task 2",
+      "date": "2019-05",
+      "awarder": "",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "1st place at ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
+      "date": "2019-05",
+      "awarder": "",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "1st place at ICDAR 2019 Robust Reading Challenge On SROIE--Task 2",
+      "date": "2019-05",
+      "awarder": "",
+      "url": "",
+      "summary": ""
+    }
+  ],
+  "certificates": [],
   "skills": [],
   "languages": [],
   "interests": [],
   "references": [],
   "projects": [],
-  "volunteer": []
+  "meta": {
+    "theme": "professional"
+  }
 }

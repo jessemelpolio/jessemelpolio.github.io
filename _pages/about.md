@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: zhenzhu_new.png
+  image: zhenzhu_new.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     Picture taken in Hawaii in 2024.

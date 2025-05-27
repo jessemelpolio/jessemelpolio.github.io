@@ -1304,3 +1304,35 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// News container scrollbar styling
+.news-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-theme-color) var(--global-bg-color);
+}
+
+.news-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-container::-webkit-scrollbar-track {
+  background: var(--global-bg-color);
+  border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+  background: var(--global-theme-color);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.news-container::-webkit-scrollbar-thumb:hover {
+  background: var(--global-hover-color);
+}
+
+// Add a subtle border to indicate scrollable area
+.news-container[style*="overflow-y: auto"] {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  padding: 10px;
+}

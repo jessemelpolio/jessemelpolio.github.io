@@ -61,15 +61,15 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <div style="margin-top: 3rem;">
-        <h2>
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-        </h2>
-        {% include selected_papers.liquid %}
-        <div style="margin-top: 1rem; text-align: center;">
-          <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline-primary">
+        <div class="selected-publications-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h2 style="margin: 0;">
+            <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+          </h2>
+          <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline-primary btn-sm">
             View Full Publication List
           </a>
         </div>
+        {% include selected_papers.liquid %}
       </div>
     {% endif %}
 

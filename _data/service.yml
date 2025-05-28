@@ -1,0 +1,30 @@
+organizing:
+  - role: "Co-organizer"
+    name: "UIUC External Speaker Series"
+    url: "https://vision.cs.illinois.edu/vision_website/"
+    description: "Interested speakers are welcome to reach out to register for upcoming sessions"
+  
+  - role: "Co-organizer"
+    name: "UIUC Vision Mini-Conference"
+    url: "https://visionminiconference25.github.io"
+
+reviewing:
+  conferences:
+    - "CVPR"
+    - "ICCV" 
+    - "ECCV"
+    - "ICLR"
+    - "NeurIPS"
+    - "ICML"
+    - "AAAI"
+    - "IJCAI"
+    - "BMVC"
+    - "WACV"
+    - "and others"
+  
+  journals:
+    - "TPAMI"
+    - "IJCV"
+    - "TIP"
+    - "PR"
+    - "and others" 

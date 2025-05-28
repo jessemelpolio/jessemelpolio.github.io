@@ -3,6 +3,8 @@ layout: default
 ---
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
 .page-sidebar {
   position: fixed;
   left: 20px;
@@ -11,6 +13,201 @@ layout: default
   z-index: 1000;
   max-height: 70vh;
   overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* Header styling for name and tagline */
+.post-header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-family: 'Playfair Display', 'Crimson Text', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--global-text-color-light, #6c757d);
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.identification {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--global-text-color, #24292e);
+  margin: 0.3rem 0 0 0;
+  opacity: 0.9;
+}
+
+/* Responsive behavior for header */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+  }
+  
+  .identification {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title {
+    font-size: 1.75rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .identification {
+    font-size: 0.95rem;
+  }
+}
+
+/* Dark mode styling for tagline and identification */
+html[data-theme="dark"] .tagline {
+  color: #a8a8a8;
+}
+
+html[data-theme="dark"] .identification {
+  color: #e6edf3;
+}
+
+/* Medium screens: Hide text by default, show on hover */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .page-sidebar {
+    width: 20px;
+    overflow: hidden;
+  }
+  
+  .page-sidebar:not(:hover) .sidebar-nav a {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .page-sidebar:hover {
+    width: auto;
+    min-width: 200px;
+    background: rgba(var(--global-bg-color-rgb, 255, 255, 255), 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 16px;
+    margin-left: -16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid var(--global-theme-color);
+  }
+  
+  html[data-theme="dark"] .page-sidebar:hover {
+    background: rgba(28, 28, 29, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .page-sidebar:hover .sidebar-nav a {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Add backdrop blur when hovering on medium screens */
+  .page-sidebar:hover::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  html[data-theme="dark"] .page-sidebar:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Small screens: Show dots only, no text even on hover */
+@media (max-width: 768px) {
+  .page-sidebar {
+    width: 20px;
+    overflow: hidden;
+    left: 15px;
+  }
+  
+  .sidebar-nav a {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Keep dots visible but smaller */
+  .sidebar-nav li::before {
+    width: 8px;
+    height: 8px;
+    left: 5px;
+    top: 7px;
+  }
+  
+  .sidebar-nav li.major::before {
+    width: 10px;
+    height: 10px;
+    left: 4px;
+    top: 6px;
+  }
+  
+  .timeline-container::before {
+    left: 9px;
+  }
+}
+
+/* Enhanced hover state for larger screens */
+@media (min-width: 1201px) {
+  .page-sidebar {
+    border-left: 3px solid transparent;
+  }
+  
+  .page-sidebar:hover {
+    border-left: 3px solid var(--global-theme-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(var(--global-bg-color-rgb, 255, 255, 255), 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 16px;
+    margin-left: -16px;
+  }
+  
+  html[data-theme="dark"] .page-sidebar:hover {
+    background: rgba(28, 28, 29, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .timeline-container {
@@ -26,6 +223,11 @@ layout: default
   bottom: 0;
   width: 2px;
   background-color: var(--global-text-color-light, #d1d5da);
+  transition: all 0.3s ease;
+}
+
+.page-sidebar:hover .timeline-container::before {
+  background-color: var(--global-theme-color, #0366d6);
 }
 
 .sidebar-nav {
@@ -33,6 +235,7 @@ layout: default
   margin: 0;
   padding: 0;
   position: relative;
+  min-width: 160px;
 }
 
 .sidebar-nav li {
@@ -70,26 +273,33 @@ layout: default
   box-shadow: 0 0 0 2px var(--global-theme-color, #0366d6);
 }
 
+.page-sidebar:hover .sidebar-nav li::before {
+  box-shadow: 0 0 0 2px var(--global-theme-color, #0366d6);
+}
+
 .sidebar-nav a {
   display: block;
   padding: 0.25rem 0.5rem 0.25rem 1.5rem;
   color: var(--global-text-color, #586069);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
   margin-left: 0.5rem;
   text-shadow: 0 0 3px var(--global-bg-color, rgba(255,255,255,0.8));
+  border-radius: 4px;
 }
 
 .sidebar-nav a:hover {
   color: var(--global-text-color, #24292e);
+  background: rgba(var(--global-theme-color-rgb, 3, 102, 214), 0.1);
 }
 
 .sidebar-nav a.active {
   color: var(--global-theme-color, #0366d6);
   font-weight: 600;
+  background: rgba(var(--global-theme-color-rgb, 3, 102, 214), 0.15);
 }
 
 /* Dark mode specific styles */
@@ -142,31 +352,99 @@ html[data-theme="dark"] .sidebar-nav a:hover {
   color: #ffffff;
 }
 
-@media (max-width: 1024px) {
-  .page-sidebar {
-    display: none;
+html[data-theme="dark"] .page-sidebar:hover {
+  border-left-color: var(--global-theme-color);
+}
+
+/* Enhanced content font sizes */
+.post article {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.post article > p:first-of-type {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--global-text-color, #24292e);
+}
+
+.post article h2,
+.post article h3 {
+  font-size: 1.9rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--global-text-color, #24292e);
+  line-height: 1.2;
+}
+
+.post article p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.post article ul li {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.post article strong, .post article b {
+  font-weight: 500;
+}
+
+.post article a {
+  font-weight: 400;
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .post article > p:first-of-type {
+    color: var(--global-text-color, #f0f6fc);
+    font-weight: 400;
+  }
+  
+  .post article h2,
+  .post article h3 {
+    color: var(--global-text-color, #f0f6fc);
   }
 }
 
-/* Hide sidebar on smaller screens */
-@media (max-width: 768px) {
-  .page-sidebar {
-    display: none;
-  }
+html[data-theme="dark"] .post article > p:first-of-type {
+  color: var(--global-text-color, #f0f6fc);
+  font-weight: 400;
+}
+
+html[data-theme="dark"] .post article h2,
+html[data-theme="dark"] .post article h3 {
+  color: var(--global-text-color, #f0f6fc);
 }
 </style>
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+    <div class="header-container">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      {% if page.tagline %}
+        <p class="tagline">{{ page.tagline }}</p>
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+      {% if page.identification %}
+        <p class="identification">{{ page.identification }}</p>
+      {% endif %}
+    </div>
   </header>
 
   <article>
@@ -217,7 +495,7 @@ html[data-theme="dark"] .sidebar-nav a:hover {
     {% if page.selected_papers %}
       <div style="margin-top: 3rem;" id="selected-publications">
         <div class="selected-publications-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-          <h2 style="margin: 0;">
+          <h2>
             <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
           </h2>
           <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline-primary btn-sm">
@@ -233,29 +511,37 @@ html[data-theme="dark"] .sidebar-nav a:hover {
       <h2>Collaborations</h2>
       <p>I've had the privilege of mentoring several talented students throughout my Ph.D. journey:</p>
       <ul>
-        <li><strong><a href="https://scholar.google.com/citations?user=C04zJHEAAAAJ&hl=en">Mengde Xu</a></strong> — Computer Vision and Deep Learning</li>
-        <li><strong><a href="https://seanseattle.github.io">Zhiliang Xu</a></strong> — Image Generation and Face Synthesis</li>
-        <li><strong><a href="https://scholar.google.com.hk/citations?user=VVU574oAAAAJ&hl=zh-CN">Zijie Wu</a></strong> — Style Transfer and Generative Models</li>
-        <li><strong><a href="https://mruil.github.io">Yang Liu</a></strong> — Watermark Removal and Image Processing</li>
-        <li><strong><a href="https://scholar.google.com/citations?user=jTrfuH8AAAAJ&hl=en">Xudong Xie</a></strong> — Computer Vision Research</li>
-        <li><strong><a href="https://scholar.google.com.au/citations?user=e2u6hRoAAAAJ&hl=en">Yiming Gong</a></strong> — Machine Learning and Computer Vision</li>
-        <li><strong><a href="https://scholar.google.com/citations?user=abeSWQsAAAAJ&hl=en">Joshua Cho</a></strong> — Computational Photography and Image Enhancement</li>
+        {% for coauthor_group in site.data.coauthors %}
+          {% for coauthor in coauthor_group[1] %}
+            {% if coauthor.collaboration_type == "former_mentee" %}
+              <li><strong><a href="{{ coauthor.url }}">{{ coauthor.firstname[0] }} {{ coauthor_group[0] | capitalize }}</a></strong>{% if coauthor.description %} — {{ coauthor.description }}{% endif %}</li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
       </ul>
       
       <p>I'm actively collaborating with current researchers:</p>
       <ul>
-        <li><strong><a href="https://avaxiao.github.io">Yao Xiao</a></strong> — Advanced Computer Vision Techniques</li>
-        <li><strong><a href="https://zpbao.github.io">Zhipeng Bao</a></strong> — Deep Learning and Computer Vision</li>
+        {% for coauthor_group in site.data.coauthors %}
+          {% for coauthor in coauthor_group[1] %}
+            {% if coauthor.collaboration_type == "current" %}
+              <li><strong><a href="{{ coauthor.url }}">{{ coauthor.firstname[0] }} {{ coauthor_group[0] | capitalize }}</a></strong>{% if coauthor.description %} — {{ coauthor.description }}{% endif %}</li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
       </ul>
     </div>
 
     <!-- Service -->
     <div style="margin-top: 3rem;" id="service">
       <h2>Service</h2>
-      <p><strong>Co-organizer:</strong> <a href="https://vision.cs.illinois.edu/vision_website/">UIUC External Speaker Series</a> — Interested speakers are welcome to reach out to register for upcoming sessions</p>
-      <p><strong>Co-organizer:</strong> <a href="https://visionminiconference25.github.io">UIUC Vision Mini-Conference</a></p>
-      <p><strong>Conference Reviewer:</strong> CVPR, ICCV, ECCV, ICLR, NeurIPS, ICML, AAAI, IJCAI, BMVC, WACV, and others</p>
-      <p><strong>Journal Reviewer:</strong> TPAMI, IJCV, TIP, PR, and others</p>
+      {% for org in site.data.service.organizing %}
+        <p><strong>{{ org.role }}:</strong> 
+          {% if org.url %}<a href="{{ org.url }}">{{ org.name }}</a>{% else %}{{ org.name }}{% endif %}{% if org.description and org.description != "" %} — {{ org.description }}{% endif %}
+        </p>
+      {% endfor %}
+      <p><strong>Conference Reviewer:</strong> {{ site.data.service.reviewing.conferences | join: ', ' }}</p>
+      <p><strong>Journal Reviewer:</strong> {{ site.data.service.reviewing.journals | join: ', ' }}</p>
     </div>
 
     <!-- Social -->

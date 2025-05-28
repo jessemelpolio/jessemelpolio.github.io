@@ -63,28 +63,7 @@
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails and entry.preview %}col-sm-7{% else %}col-sm-12{% endif %}">
     <div class="publication-content" style="{% if site.enable_publication_thumbnails and entry.preview %}padding-left: 20px;{% endif %}">
       
-      <!-- Oral Presentation Award Badge (above everything) -->
-      {% if entry.additional_info contains "Oral" %}
-        <div class="oral-presentation-badge" style="margin-bottom: 12px;">
-          <span style="
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24); 
-            color: white; 
-            padding: 8px 16px; 
-            border-radius: 25px; 
-            font-size: 0.9em; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4); 
-            border: 2px solid #fff; 
-            display: inline-block;
-          ">
-            🏆 ORAL PRESENTATION
-          </span>
-        </div>
-      {% endif %}
-      
-      <!-- Year and venue in same line -->
+      <!-- Year, venue, and oral presentation badge in same line -->
       <div class="publication-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
         {% if entry.year %}
           <span class="year-badge badge badge-light" style="font-size: 1.0em; padding: 6px 10px; color: #1f2937; background-color: #ffffff; border: 1px solid #1f2937; flex-shrink: 0; font-weight: bold;">{{ entry.year }}</span>
@@ -123,6 +102,26 @@
               {{ entry.abbr }}
             </abbr>
           {% endif %}
+        {%- endif -%}
+        
+        <!-- Oral Presentation Badge (inline with year and venue) -->
+        {% if entry.additional_info contains "Oral" %}
+          <span style="
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24); 
+            color: white; 
+            padding: 6px 12px; 
+            border-radius: 20px; 
+            font-size: 0.8em; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3); 
+            border: 1px solid #fff; 
+            display: inline-block;
+            flex-shrink: 0;
+          ">
+            🏆 ORAL PRESENTATION
+          </span>
         {% endif %}
       </div>
       
@@ -519,31 +518,17 @@ function toggleAbstract(button) {
 </script>
 
 <style>
-.oral-presentation-badge {
-  text-align: left;
-  margin-bottom: 12px;
-}
-
-.oral-presentation-badge span {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  font-size: 0.9em;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-  border: 2px solid #fff;
-}
-
 /* Responsive design for oral presentation badge */
 @media (max-width: 768px) {
-  .oral-presentation-badge span {
-    font-size: 0.8em;
-    padding: 6px 12px;
-    letter-spacing: 0.5px;
+  .publication-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .publication-header span {
+    font-size: 0.7em !important;
+    padding: 4px 8px !important;
+    letter-spacing: 0.3px !important;
   }
 }
 </style>

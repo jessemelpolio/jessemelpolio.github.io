@@ -26,7 +26,7 @@ hr {
 table {
   td,
   th {
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 1px 1rem 1px 0;
   }
 
@@ -798,7 +798,7 @@ footer.sticky-bottom {
       }
 
       .author {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.4;
         margin-bottom: 0.5rem;
         
@@ -848,8 +848,8 @@ footer.sticky-bottom {
 
       // Abstract styling with truncation
       .abstract {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 0.85rem;
+        line-height: 1.4;
         color: var(--global-text-color);
         margin-top: 1rem;
         
@@ -863,6 +863,21 @@ footer.sticky-bottom {
             text-decoration: none;
           }
         }
+      }
+
+      // Override global paragraph styling for abstract containers
+      .abstract-container p {
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+        font-weight: 300 !important;
+        margin-bottom: 0 !important;
+      }
+
+      // Ensure abstract text specifically matches author size
+      .abstract-text {
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+        font-weight: 300 !important;
       }
 
       // "Under Review" badge styling
@@ -1624,7 +1639,7 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .selected-abstract {
   color: var(--global-text-color) !important;
-  font-size: 0.95em !important;
+  font-size: 0.85rem !important;
   line-height: 1.4 !important;
   margin-bottom: 0.5rem !important;
 }

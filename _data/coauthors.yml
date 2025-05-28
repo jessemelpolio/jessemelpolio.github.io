@@ -1,18 +1,26 @@
 "hoiem":
   - firstname: ["Derek"]
     url: http://dhoiem.cs.illinois.edu/
+    description: "Ph.D. Advisor"
 
 "huang":
   - firstname: ["Tengteng"]
     url: https://scholar.google.com/citations?user=N70UBoUAAAAJ&hl=en
+    description: "Computer Vision and Deep Learning"
 
 "bai":
   - firstname: ["Xiang"]
     url: https://xbai.vlrlab.net
+    description: "Master's Advisor"
 
 "xu":
   - firstname: ["Mengde"]
     url: https://scholar.google.com/citations?user=C04zJHEAAAAJ&hl=en
+    description: "Computer Vision and Deep Learning"
+  - firstname: ["Zhiliang"]
+    url: https://seanseattle.github.io
+    description: "Image Generation and Face Synthesis"
+    collaboration_type: "former_mentee"
 
 "shi":
   - firstname: ["Baoguang"]
@@ -85,6 +93,10 @@
 "liu":
   - firstname: ["Wenyu"]
     url: http://eic.hust.edu.cn/professor/liuwenyu/
+  - firstname: ["Yang"]
+    url: https://mruil.github.io
+    description: "Watermark Removal and Image Processing"
+    collaboration_type: "former_mentee"
 
 "singh":
   - firstname: ["Krishna Kumar"]
@@ -101,10 +113,14 @@
 "xiao":
   - firstname: ["Yao"]
     url: https://avaxiao.github.io
+    description: "Advanced Computer Vision Techniques"
+    collaboration_type: "current"
 
 "wu":
   - firstname: ["Zijie"]
     url: https://scholar.google.com.hk/citations?user=VVU574oAAAAJ&hl=zh-CN
+    description: "Style Transfer and Generative Models"
+    collaboration_type: "former_mentee"
 
 # "yu":
 #   - firstname: ["Chaohui"]
@@ -113,23 +129,23 @@
 "gong":
   - firstname: ["Yiming"]
     url: https://scholar.google.com.au/citations?user=e2u6hRoAAAAJ&hl=en
+    description: "Machine Learning and Computer Vision"
+    collaboration_type: "former_mentee"
 
 "cho":
   - firstname: ["Joshua"]
     url: https://scholar.google.com/citations?user=abeSWQsAAAAJ&hl=en
+    description: "Computational Photography and Image Enhancement"
+    collaboration_type: "former_mentee"
 
 "xie":
   - firstname: ["Xudong"]
     url: https://scholar.google.com/citations?user=jTrfuH8AAAAJ&hl=en
+    description: "Computer Vision Research"
+    collaboration_type: "former_mentee"
 
 "bao":
   - firstname: ["Zhipeng"]
     url: https://zpbao.github.io
-
-"xu_zhiliang":
-  - firstname: ["Zhiliang"]
-    url: https://seanseattle.github.io
-
-"liu_yang":
-  - firstname: ["Yang"]
-    url: https://mruil.github.io
+    description: "Deep Learning and Computer Vision"
+    collaboration_type: "current"

@@ -4,6 +4,8 @@
   author={Zhu, Zhen and Gong, Yiming and Xiao, Yao and Liu, Yaoyao and Hoiem, Derek},
   journal={Under review},
   year={2025},
+  category={Multimodal Learning, Continual/Dynamic Learning},
+  abstract={Large multimodal models (LMMs) are effective for many vision and language problems but may underperform in specialized domains such as object counting and clock reading. Fine-tuning improves target task performance but sacrifices generality, while retraining with an expanded dataset is expensive. We investigate how to teach LMMs new skills and domains, examining the effects of tuning different components and of multiple strategies to mitigate forgetting. We experiment by tuning on new target tasks singly or sequentially and measuring learning as target task performance and forgetting as held-out task performance. Surprisingly, we find that the self-attention projection layers in the language model of the tested LMM can be fine-tuned to learn without forgetting. Fine-tuning the MLP layers in the language model improves learning with much less forgetting than tuning the full model, and employing knowledge distillation regularization mitigates forgetting greatly. We will release code to foster reproducible research on continual adaptation of large multimodal models.},
   bibtex_show={true},
   selected={true}
 }
@@ -14,6 +16,8 @@
   author={Xiao, Yao and Fu, Qiqian and Tao, Heyi and Wu, Yuqun and Zhu, Zhen and Hoiem, Derek},
   journal={Under review},
   year={2025},
+  category={Multimodal Learning},
+  abstract={Image-text models excel at image-level tasks but struggle with detailed visual understanding. While these models provide strong visual-language alignment, segmentation models like SAM2 offer precise spatial boundaries for objects. To this end, we propose TextRegion, a simple, effective and training-free framework that combines the strengths of image-text models and SAM2 to generate powerful text-aligned region tokens. These tokens enable detailed visual understanding while preserving open-vocabulary capabilities. They can be directly applied to various downstream tasks, including open-world semantic segmentation, referring expression comprehension, and grounding. We conduct extensive evaluations and consistently achieve superior or competitive performance compared to state-of-the-art training-free methods. Additionally, our framework is compatible with many image-text models, making it highly practical and easily extensible as stronger models emerge.},
   bibtex_show={true}
 }
 
@@ -23,8 +27,10 @@
   author={Cho, Joshua and Aghajanzadeh, Sara and Zhu, Zhen and Forsyth, D.A.},
   journal={Under review},
   year={2025},
+  category={Image Generation},
   arxiv={2412.13401},
   html={https://arxiv.org/abs/2412.13401},
+  abstract={In this paper, we present a simple yet highly effective "free lunch" solution for low-light image enhancement (LLIE), which aims to restore low-light images as if acquired in well-illuminated environments. Our method necessitates no optimization, training, fine-tuning, text conditioning, or hyperparameter adjustments, yet it consistently reconstructs low-light images with superior fidelity. Specifically, we leverage a pre-trained text-to-image diffusion prior, learned from training on a large collection of natural images, and the features present in the model itself to guide the inference, in contrast to existing methods that depend on customized constraints. Comprehensive quantitative evaluations demonstrate that our approach outperforms SOTA methods on established datasets, while qualitative analyses indicate enhanced color accuracy and the rectification of subtle chromatic deviations. Furthermore, additional experiments reveal that our method, without any modifications, achieves SOTA-comparable performance in the auto white balance (AWB) task.},
   bibtex_show={true}
 }
 
@@ -34,7 +40,9 @@
   author={Zhu, Hanshen and Zhu, Zhen and Zhang, Kaile and Gong, Yiming and Liu, Yuliang and Bai, Xiang},
   journal={Under review},
   year={2025},
+  category={Image Generation},
   additional_info={. *Joint first author},
+  abstract={We tackle the problem of geometric image editing, where an object within an image is repositioned, reoriented, or reshaped while preserving overall scene coherence. Previous diffusion-based editing methods often attempt to handle all relevant subtasks in a single step, which proves difficult when transformations become large or structurally complex. We address this by proposing a decoupled pipeline that separates object transformation, source region inpainting, and target region refinement. Both inpainting and refinement are implemented using a training-free diffusion approach, FreeFine. In experiments on our new GeoBench benchmark, which contains both 2D and 3D editing scenarios, FreeFine outperforms state-of-the-art alternatives in image fidelity and edit precision, especially under demanding transformations.},
   bibtex_show={true}
 }
 
@@ -44,6 +52,8 @@
   author={Gong, Yiming and Zhu, Zhen and Zhang, Minjia},
   journal={Under review},
   year={2025},
+  category={Image Generation},
+  abstract={We aim to tackle the challenge of fast text-guided image editing using diffusion models. The goal of this task is to perform a 4-step editing process on the image which closely follows the textual instruction while preserves vital information in the original image. We approach this challenge by revising on the two important steps in image editing, inversion and regeneration. Inspired by the formulation of RectifiedFlow based model, we design an inversion method, PerRFI, for this framework which induces less trajectory error during inversion. We further introduce a disentangled prompt guidance method, DPG, that controls image editability while providing better detail preservation than counterpart guidance strategy. Finally, we introduce ControlNet into the generation process using canny image as condition. This method helps to inject structural information into the model and also helps to remove distortions and artifacts. Our approach performs text-guided image editing in real-time, requiring only 8 numbers of functional evaluations (NFE), which takes 4 NFE in inversion and 4 NFE in generation. Our method is not only fast, but also achieves better qualitative and quantitative results comparing to other few-step methods.},
   bibtex_show={true}
 }
 
@@ -53,6 +63,7 @@
   author={Blume, Ansel and Nguyen, Khanh Duy and Wang, Zhenhailong and Chen, Yangyi and Shlapentokh-Rothman, Michal and Jin, Xiaomeng and Kim, Jeonghwan and Zhu, Zhen and Liu, Jiateng and Huang, Kuan-Hao and Sidhu, Mankeerat and Zhang, Xuanming and Liu, Vivian and Sinha, Raunak and Wu, Te-Lin and Zala, Abhay and Stengel-Eskin, Elias and Yin, Da and Xiao, Yao and Mall, Utkarsh and Yu, Zhou and Chang, Kai-Wei and Cobb, Camille and Karahalios, Karrie and Chilton, Lydia and Bansal, Mohit and Peng, Nanyun and Vondrick, Carl and Hoiem, Derek and Ji, Heng},
   booktitle={ACM Multimedia},
   year={2024},
+  category={Multimodal Learning},
   html={https://openreview.net/forum?id=dqmhErGul0},
   bibtex_show={true}
 }
@@ -62,14 +73,17 @@
   author={Zhu, Zhen and Gong, Yiming and Hoiem, Derek},
   journal={ECCV},
   year={2024},
+  category={Multimodal Learning, Continual/Dynamic Learning},
   arxiv={2409.08518},
   additional_info={. *Oral Presentation},
   html={https://zzhu.vision/anytime_continual_learning/},
   code={https://github.com/jessemelpolio/AnytimeCL},
   video={https://youtu.be/gSOpLxQi8jg?si=Zhrhg7aXSqsFr9Gu},
   preview={https://s2.loli.net/2024/09/29/b2mCgAlS3r7y4Zk.png},
+  abstract={We propose an approach for anytime continual learning (AnytimeCL) for open vocabulary image classification. The AnytimeCL problem aims to break away from batch training and rigid models by requiring that a system can predict any set of labels at any time and efficiently update and improve when receiving one or more training samples at any time. Despite the challenging goal, we achieve substantial improvements over recent methods. We propose a dynamic weighting between predictions of a partially fine-tuned model and a fixed open vocabulary model that enables continual improvement when training samples are available for a subset of a task's labels. We also propose an attention-weighted PCA compression of training features that reduces storage and computation with little impact to model accuracy. Our methods are validated with experiments that test flexibility of learning and inference.},
   bibtex_show={true},
-  selected={true}
+  selected={true},
+  google_scholar_id={KlAtU1dfN6UC}
 }
 
 @article{zhu2023continual,
@@ -78,8 +92,10 @@
   author={Zhu, Zhen and Lyu, Weijie and Xiao, Yao and Hoiem, Derek},
   journal={TMLR},
   year={2024},
+  category={Multimodal Learning, Continual/Dynamic Learning},
   arxiv={2307.01430},
   code={https://github.com/jessemelpolio/TreeProbe},
+  abstract={We introduce a method for flexible and efficient continual learning in open-vocabulary image classification, drawing inspiration from the complementary learning systems observed in human cognition. Specifically, we propose to combine predictions from a CLIP zero-shot model and the exemplar-based model, using the zero-shot estimated probability that a sample's class is within the exemplar classes. We also propose a "tree probe" method, an adaption of lazy learning principles, which enables fast learning from new examples with competitive accuracy to batch-trained linear models. We test in data incremental, class incremental, and task incremental settings, as well as ability to perform flexible inference on varying subsets of zero-shot and learned categories. Our proposed method achieves a good balance of learning speed, target task effectiveness, and zero-shot effectiveness.},
   bibtex_show={true},
   selected={true},
   preview={https://s2.loli.net/2023/11/29/48ULFRYgJZKmTkv.png},
@@ -92,14 +108,16 @@
   author={Zhu, Zhen and Li, Yijun and Lyu, Weijie and Singh, Krishna Kumar and Shu, Zhixin and Pirk, S{\"o}ren and Hoiem, Derek},
   booktitle={WACV},
   year={2024},
+  category={Image Generation},
   arxiv={2307.01425},
   code={https://github.com/jessemelpolio/MultimodalGAN},
+  abstract={We investigate how to generate multimodal image outputs, such as RGB, depth, and surface normals, with a single generative model. The challenge is to produce outputs that are realistic, and also consistent with each other. Our solution builds on the StyleGAN3 architecture, with a shared backbone and modality-specific branches in the last layers of the synthesis network, and we propose per-modality fidelity discriminators and a cross-modality consistency discriminator. In experiments on the Stanford2D3D dataset, we demonstrate realistic and consistent generation of RGB, depth, and normal images. We also show a training recipe to easily extend our pretrained model on a new domain, even with a few pairwise data. We further evaluate the use of synthetically generated RGB and depth pairs for training or fine-tuning depth estimators.},
   bibtex_show={true},
   preview={https://s2.loli.net/2023/11/29/YcWr4FEsuafMimz.png}
 }
 
 @article{peng2023comparing,
-  abbr={JoV},
+  abbr={JOV},
   title={Comparing Human Object Learning with Deep Neural Networks},
   author={Peng, Yinuo and Zhu, Zhen and Hoiem, Derek and Wang, Ranxiao Frances},
   journal={Journal of Vision},
@@ -107,6 +125,7 @@
   number={9},
   pages={4984--4984},
   year={2023},
+  category={Continual/Dynamic Learning},
   publisher={The Association for Research in Vision and Ophthalmology},
   bibtex_show={true}
 }
@@ -117,8 +136,10 @@
   author={Wu, Zijie and Yu, Chaohui and Zhu, Zhen and Wang, Fan and Bai, Xiang},
   journal={arXiv preprint arXiv:2310.08094},
   year={2023},
+  category={Image Generation},
   arxiv={2310.08094},
   website={https://jarrentwu1031.github.io/SingleInsert-web/},
+  abstract={Recent progress in text-to-image (T2I) models enables high-quality image generation with flexible textual control. To utilize the abundant visual priors in the off-the-shelf T2I models, a series of methods try to invert an image to proper embedding that aligns with the semantic space of the T2I model. However, these image-to-text (I2T) inversion methods typically need multiple source images containing the same concept or struggle with the imbalance between editing flexibility and visual fidelity. In this work, we point out that the critical problem lies in the foreground-background entanglement when learning an intended concept, and propose a simple and effective baseline for single-image I2T inversion, named SingleInsert. SingleInsert adopts a two-stage scheme. In the first stage, we regulate the learned embedding to concentrate on the foreground area without being associated with the irrelevant background. In the second stage, we finetune the T2I model for better visual resemblance and devise a semantic loss to prevent the language drift problem. With the proposed techniques, SingleInsert excels in single concept generation with high visual fidelity while allowing flexible editing. Additionally, SingleInsert can perform single-image novel view synthesis and multiple concepts composition without requiring joint training. To facilitate evaluation, we design an editing prompt list and introduce a metric named Editing Success Rate (ESR) for quantitative assessment of editing flexibility.},
   bibtex_show={true},
   preview={https://s2.loli.net/2023/11/29/HOTwY1JzE8PqxoA.png}
 }
@@ -129,7 +150,9 @@
   author={Xie, Xudong and Zhu, Zhen and Wu, Zijie and Xu, Zhiliang and Zhu, Yingying},
   journal={arXiv preprint arXiv:2305.06200},
   year={2023},
+  category={Image Generation},
   arxiv={2305.06200},
+  abstract={This paper aims for a new generation task: non-stationary multi-texture synthesis, which unifies synthesizing multiple non-stationary textures in a single model. Most non-stationary textures have large scale variance and can hardly be synthesized through one model. To combat this, we propose a multi-scale generator to capture structural patterns of various scales and effectively synthesize textures with a minor cost. However, it is still hard to handle textures of different categories with different texture patterns. Therefore, we present a category-specific training strategy to focus on learning texture pattern of a specific domain. Interestingly, once trained, our model is able to produce multi-pattern generations with dynamic variations without the need to finetune the model for different styles. Moreover, an objective evaluation metric is designed for evaluating the quality of texture expansion and global structure consistency. To our knowledge, ours is the first scheme for this challenging task, including model, training, and evaluation. Experimental results demonstrate the proposed method achieves superior performance and time efficiency.},
   preview={https://s2.loli.net/2024/09/29/2TaOMg9ZE4sBiCr.png},
   bibtex_show={true}
 }
@@ -141,10 +164,12 @@
   booktitle={ECCV},
   pages={189--206},
   year={2022},
+  category={Image Generation},
   organization={Springer},
   video={https://www.youtube.com/watch?v=scZuJCXhL14},
   arxiv={2207.04808},
   code={https://github.com/JarrentWu1031/CCPL},
+  abstract={In this paper, we aim to devise a universally versatile style transfer method capable of performing artistic, photo-realistic, and video style transfer jointly, without seeing videos during training. Previous single-frame methods assume a strong constraint on the whole image to maintain temporal consistency, which could be violated in many cases. Instead, we make a mild and reasonable assumption that global inconsistency is dominated by local inconsistencies and devise a generic Contrastive Coherence Preserving Loss (CCPL) applied to local patches. CCPL can preserve the coherence of the content source during style transfer without degrading stylization. Moreover, it owns a neighbor-regulating mechanism, resulting in a vast reduction of local distortions and considerable visual quality improvement. Aside from its superior performance on versatile style transfer, it can be easily extended to other tasks, such as image-to-image translation. Besides, to better fuse content and style features, we propose Simple Covariance Transformation (SCT) to effectively align second-order statistics of the content feature with the style feature. Experiments demonstrate the effectiveness of the resulting model for versatile style transfer, when armed with CCPL.},
   bibtex_show={true},
   additional_info={. *Oral Presentation},
   selected={true},
@@ -161,8 +186,11 @@
   number={8},
   pages={4306--4320},
   year={2021},
+  category={Image Generation},
   publisher={IEEE},
   doi={10.1109/TPAMI.2021.3066681},
+  html={https://ieeexplore.ieee.org/document/9384288},
+  abstract={This paper proposes a new generative adversarial network for pose transfer, i.e., transferring the pose of a given person to a target pose. We design a progressive generator which comprises a sequence of transfer blocks. Each block performs an intermediate transfer step by modeling the relationship between the condition and the target poses with attention mechanism. Two types of blocks are introduced, namely Pose-Attentional Transfer Block (PATB) and Aligned Pose-Attentional Transfer Bloc (APATB). Compared with previous works, our model generates more photorealistic person images that retain better appearance consistency and shape consistency compared with input images. We verify the efficacy of the model on the Market-1501 and DeepFashion datasets, using quantitative and qualitative measures. Furthermore, we show that our method can be used for data augmentation for the person re-identification task, alleviating the issue of data insufficiency.},
   bibtex_show={true},
   selected={true},
   preview={https://i.loli.net/2021/04/21/FxvM76OEGsBHTz5.png},
@@ -175,7 +203,9 @@
   author={Li, Xiangtai and You, Ansheng and Zhu, Zhen and Zhao, Houlong and Yang, Maoke and Yang, Kuiyuan and Tong, Yunhai},
   booktitle={ECCV},
   year={2020},
+  category={Continual Learning},
   arxiv={2002.10120},
+  abstract={In this paper, we focus on designing effective method for fast and accurate scene parsing. A common practice to improve the performance is to attain high resolution feature maps with strong semantic representation. Two strategies are widely used -- atrous convolutions and feature pyramid fusion, are either computation intensive or ineffective. Inspired by the Optical Flow for motion alignment between adjacent video frames, we propose a Flow Alignment Module (FAM) to learn Semantic Flow between feature maps of adjacent levels, and broadcast high-level features to high resolution features effectively and efficiently. Furthermore, integrating our module to a common feature pyramid structure exhibits superior performance over other real-time methods even on light-weight backbone networks, such as ResNet-18. Extensive experiments are conducted on several challenging datasets, including Cityscapes, PASCAL Context, ADE20K and CamVid. Especially, our network is the first to achieve 80.4% mIoU on Cityscapes with a frame rate of 26 FPS.},
   bibtex_show={true},
   additional_info={. *Oral Presentation},
   selected={true},
@@ -190,9 +220,11 @@
   booktitle={CVPR},
   pages={5467--5476},
   year={2020},
+  category={Image Generation},
   website={https://seanseattle.github.io/SMIS/},
   arxiv={2003.12697},
   code={https://github.com/Seanseattle/SMIS},
+  abstract={In this paper, we focus on semantically multi-modal image synthesis (SMIS) task, namely, generating multi-modal images at the semantic level. Previous work seeks to use multiple class-specific generators, constraining its usage in datasets with a small number of classes. We instead propose a novel Group Decreasing Network (GroupDNet) that leverages group convolutions in the generator and progressively decreases the group numbers of the convolutions in the decoder. Consequently, GroupDNet is armed with much more controllability on translating semantic labels to natural images and has plausible high-quality yields for datasets with many classes. Experiments on several challenging datasets demonstrate the superiority of GroupDNet on performing the SMIS task. We also show that GroupDNet is capable of performing a wide range of interesting synthesis applications.},
   bibtex_show={true},
   selected={true},
   preview={https://i.loli.net/2020/03/31/cFbdyOJ3Rj1xA8w.jpg},
@@ -206,8 +238,10 @@
   booktitle={ICCV},
   pages={593--602},
   year={2019},
+  category={Continual Learning},
   arxiv={1908.07678},
   code={https://github.com/MendelXu/ANN.git},
+  abstract={The non-local module works as a particularly useful technique for semantic segmentation while criticized for its prohibitive computation and GPU memory occupation. In this paper, we present Asymmetric Non-local Neural Network to semantic segmentation, which has two prominent components: Asymmetric Pyramid Non-local Block (APNB) and Asymmetric Fusion Non-local Block (AFNB). APNB leverages a pyramid sampling module into the non-local block to largely reduce the computation and memory consumption without sacrificing the performance. AFNB is adapted from APNB to fuse the features of different levels under a sufficient consideration of long range dependencies and thus considerably improves the performance. Extensive experiments on semantic segmentation benchmarks demonstrate the effectiveness and efficiency of our work. In particular, we report the state-of-the-art performance of 81.3 mIoU on the Cityscapes test set. For a 256x128 input, APNB is around 6 times faster than a non-local block on GPU while 28 times smaller in GPU running memory occupation.},
   bibtex_show={true},
   selected={true},
   preview={https://i.loli.net/2019/07/23/5d3705a04461b68294.png},
@@ -221,9 +255,11 @@
   booktitle={CVPR},
   pages={2347--2356},
   year={2019},
+  category={Image Generation},
   arxiv={1904.03349},
   code={https://github.com/tengteng95/Pose-Transfer},
   video={https://youtu.be/bNHFPMX9BVk},
+  abstract={This paper proposes a new generative adversarial network for pose transfer, i.e., transferring the pose of a given person to a target pose. The generator of the network comprises a sequence of Pose-Attentional Transfer Blocks that each transfers certain regions it attends to, generating the person image progressively. Compared with those in previous works, our generated person images possess better appearance consistency and shape consistency with the input images, thus significantly more realistic-looking. The efficacy and efficiency of the proposed network are validated both qualitatively and quantitatively on Market-1501 and DeepFashion. Furthermore, the proposed architecture can generate training images for person re-identification, alleviating data insufficiency.},
   bibtex_show={true},
   additional_info={. *Oral Presentation},
   selected={true},
@@ -240,9 +276,11 @@
   number={4},
   pages={1--13},
   year={2018},
+  category={Image Generation},
   publisher={ACM New York, NY, USA},
   website={http://vcc.szu.edu.cn/research/2018/TexSyn},
   code={https://github.com/jessemelpolio/non-stationary_texture_syn},
+  abstract={The real world exhibits an abundance of non-stationary textures. Examples include textures with large-scale structures, as well as spatially variant and inhomogeneous textures. While existing example-based texture synthesis methods can cope well with stationary textures, non-stationary textures still pose a considerable challenge, which remains unresolved. In this paper, we propose a new approach for example-based non-stationary texture synthesis. Our approach uses a generative adversarial network (GAN), trained to double the spatial extent of texture blocks extracted from a specific texture exemplar. Once trained, the fully convolutional generator is able to expand the size of the entire exemplar, as well as of any of its sub-blocks. We demonstrate that this conceptually simple approach is highly effective for capturing large-scale structures, as well as other non-stationary attributes of the input exemplar. As a result, it can cope with challenging textures, which, to our knowledge, no other existing method can handle.},
   bibtex_show={true},
   selected={true},
   preview={https://i.loli.net/2019/05/07/5cd167d79fe98.png},
@@ -256,8 +294,10 @@
   booktitle={CVPR},
   pages={3974--3983},
   year={2018},
+  category={Detection/Segmentation},
   website={https://captain-whu.github.io/DOTA/},
   code={https://github.com/jessemelpolio/Faster_RCNN_for_DOTA},
+  abstract={Object detection is an important and challenging problem in computer vision. Although the past decade has witnessed major advances in object detection in natural scenes, such successes have been slow to aerial imagery, not only because of the huge variation in the scale, orientation and shape of the object instances on the earth's surface, but also due to the scarcity of well-annotated datasets of objects in aerial scenes. To advance object detection research in Earth Vision, also known as Earth Observation and Remote Sensing, we introduce a large-scale Dataset for Object deTection in Aerial images (DOTA). To this end, we collect 2806 aerial images from different sensors and platforms. Each image is of the size about 4000-by-4000 pixels and contains objects exhibiting a wide variety of scales, orientations, and shapes. These DOTA images are then annotated by experts in aerial image interpretation using 15 common object categories. The fully annotated DOTA images contains 188,282 instances, each of which is labeled by an arbitrary (8 d.o.f.) quadrilateral. To build a baseline for object detection in Earth Vision, we evaluate state-of-the-art object detection algorithms on DOTA. Experiments demonstrate that DOTA well represents real Earth Vision applications and are quite challenging.},
   bibtex_show={true},
   selected={true},
   preview={https://s2.loli.net/2024/09/29/zS5PvIaHB4Mx8re.png},
@@ -271,10 +311,13 @@
   booktitle={CVPR},
   pages={5909--5918},
   year={2018},
+  category={Detection/Segmentation},
   code={https://github.com/MhLiao/RRD},
+  abstract={Text in natural images is of arbitrary orientations, requiring detection in terms of oriented bounding boxes. Normally, a multi-oriented text detector often involves two key tasks: 1) text presence detection, which is a classification problem disregarding text orientation; 2) oriented bounding box regression, which concerns about text orientation. Previous methods rely on shared features for both tasks, resulting in degraded performance due to the incompatibility of the two tasks. To address this issue, we propose to perform classification and regression on features of different characteristics, extracted by two network branches of different designs. Concretely, the regression branch extracts rotation-sensitive features by actively rotating the convolutional filters, while the classification branch extracts rotation-invariant features by pooling the rotation-sensitive features. The proposed method named Rotation-sensitive Regression Detector (RRD) achieves state-of-the-art performance on three oriented scene text benchmark datasets, including ICDAR 2015, MSRA-TD500, RCTW-17 and COCO-Text. Furthermore, RRD achieves a significant improvement on a ship collection dataset, demonstrating its generality on oriented object detection.},
   bibtex_show={true},
   preview={https://i.loli.net/2019/05/07/5cd16de14e40f.png},
   selected={true},
+  arxiv={1803.05265},
   google_scholar_id={d1gkVwhDpl0C}
 }
 
@@ -286,8 +329,10 @@
   volume={1},
   pages={1095--1100},
   year={2017},
+  category={Detection/Segmentation},
   organization={IEEE},
   arxiv={1706.08789},
+  abstract={In this paper, we investigate the Chinese calligraphy synthesis problem: synthesizing Chinese calligraphy images with specified style from standard font(eg. Hei font) images. Recent works mostly follow the stroke extraction and assemble pipeline which is complex in the process and limited by the effect of stroke extraction. We treat the calligraphy synthesis problem as an image-to-image translation problem and propose a deep neural network based model which can generate calligraphy images from standard font images directly. Besides, we also construct a large scale benchmark that contains various styles for Chinese calligraphy synthesis. We evaluate our method as well as some baseline methods on the proposed dataset, and the experimental results demonstrate the effectiveness of our proposed model.},
   bibtex_show={true},
   preview={https://i.loli.net/2019/05/07/5cd16f08e48e8.png}
 }
@@ -299,6 +344,7 @@
   booktitle={WACV},
   pages={3685--3693},
   year={2021},
+  category={Image Generation},
   bibtex_show={true}
 }
 
@@ -308,6 +354,7 @@
   author={Xu, Zhiliang and Yu, Xiyu and Hong, Zhibin and Zhu, Zhen and Han, Junyu and Liu, Jingtuo and Ding, Errui and Bai, Xiang},
   journal={AAAI},
   year={2021},
+  category={Image Generation},
   bibtex_show={true}
 }
 
@@ -317,5 +364,6 @@
   author={Xu, Zhiliang and Hong, Zhibin and Ding, Changxing and Zhu, Zhen and Han, Junyu and Liu, Jingtuo and Ding, Errui},
   journal={AAAI},
   year={2022},
+  category={Image Generation},
   bibtex_show={true}
 }

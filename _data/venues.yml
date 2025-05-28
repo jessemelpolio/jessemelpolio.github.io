@@ -7,3 +7,57 @@
 
 "Vision":
   color: "#009f36"
+
+"ECCV":
+  url: https://eccv.ecva.net/
+  color: "#ffffff"
+  text_color: "#2563eb"
+  border: true
+
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#ffffff"
+  text_color: "#dc2626"
+  border: true
+
+"ICCV":
+  url: https://iccv.thecvf.com/
+  color: "#ffffff"
+  text_color: "#7c3aed"
+  border: true
+
+"WACV":
+  url: https://wacv.thecvf.com/
+  color: "#ffffff"
+  text_color: "#059669"
+  border: true
+
+"TPAMI":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+  color: "#ffffff"
+  text_color: "#1f2937"
+  border: true
+
+"TMLR":
+  url: https://jmlr.org/tmlr/
+  color: "#ffffff" 
+  text_color: "#ea580c"
+  border: true
+
+"ICDAR":
+  url: https://icdar.org/
+  color: "#ffffff"
+  text_color: "#0891b2"
+  border: true
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#ffffff"
+  text_color: "#be185d"
+  border: true
+
+"ACMM":
+  url: https://www.acmmm.org/
+  color: "#ffffff"
+  text_color: "#7c2d12"
+  border: true

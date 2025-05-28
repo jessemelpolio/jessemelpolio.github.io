@@ -680,6 +680,14 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+  max-width: 100%; // Use full width available
+  
+  // For larger screens, allow more width
+  @media (min-width: 1200px) {
+    max-width: 1400px; // Wider container on large screens
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   h1 {
     color: var(--global-theme-color);
@@ -711,13 +719,44 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 12px;
+      background-color: var(--global-card-bg-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+      }
 
       .preview {
       }
 
       .abbr {
         margin-bottom: 0.5rem;
+        
+        // Natural image scaling with aspect ratio preservation
+        .preview-container {
+          width: 100%;
+          margin-bottom: 1rem;
+          
+          img {
+            width: 100%;
+            height: auto; // Let height scale naturally
+            max-height: 300px; // Reasonable maximum to prevent overly tall images
+            object-fit: contain; // Maintain aspect ratio without cropping
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease;
+          }
+          
+          img:hover {
+            transform: scale(1.02);
+          }
+        }
 
         abbr {
           display: inline-block;
@@ -741,9 +780,28 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+        font-size: 1.1em;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        
+        a {
+          color: inherit !important;
+          text-decoration: none !important;
+          border-bottom: 1px solid transparent;
+          transition: border-bottom-color 0.2s ease;
+          
+          &:hover {
+            border-bottom-color: var(--global-theme-color);
+            text-decoration: none !important;
+          }
+        }
       }
 
       .author {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+        
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -770,23 +828,87 @@ footer.sticky-bottom {
         }
       }
 
+      .periodical {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+      }
+
+      // Category tags styling
+      .category-tags {
+        .clickable-tag {
+          &:hover {
+            background-color: rgba(var(--global-theme-color-rgb), 0.2) !important;
+            border-color: var(--global-theme-color) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(var(--global-theme-color-rgb), 0.2);
+          }
+        }
+      }
+
+      // Abstract styling with truncation
+      .abstract {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--global-text-color);
+        margin-top: 1rem;
+        
+        .read-more-btn {
+          display: inline-block;
+          font-size: 0.9rem;
+          text-decoration: underline;
+          cursor: pointer;
+          
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      // "Under Review" badge styling
+      .under-review-badge {
+        background-color: rgba(128, 128, 128, 0.1) !important;
+        color: #666 !important;
+        border: 1px solid rgba(128, 128, 128, 0.3) !important;
+        font-size: 0.8em !important;
+        padding: 4px 8px !important;
+        border-radius: 12px !important;
+        font-weight: 500 !important;
+        margin-left: 8px;
+      }
+
       .links {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+          padding: 0.4rem 0.8rem;
+          margin: 0;
+          border-radius: 6px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          transition: all 0.2s ease;
+          text-decoration: none;
 
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
+            background-color: rgba(var(--global-theme-color-rgb), 0.05);
+            transform: translateY(-1px);
           }
         }
+        
         a.award.btn {
           border-color: var(--global-highlight-color);
+          color: var(--global-highlight-color);
+          
+          &:hover {
+            background-color: rgba(var(--global-highlight-color-rgb), 0.1);
+          }
         }
       }
 
@@ -852,6 +974,47 @@ footer.sticky-bottom {
       border-color: var(--global-highlight-color);
     }
   }
+}
+
+// Enhanced styling for all publications images
+.publications .abbr {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  img {
+    width: 100%;
+    height: auto; // Let height be automatic to maintain aspect ratio
+    min-height: 150px; // Minimum height for consistency
+    max-height: 250px; // Maximum height to prevent overly large images
+    object-fit: contain; // Maintain aspect ratio, don't crop
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    background-color: var(--global-bg-color); // Background for letterboxing if needed
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  abbr {
+    margin-bottom: 8px;
+    display: inline-block;
+    font-size: 0.9em;
+    padding: 6px 10px;
+  }
+}
+
+.publications .teaser img {
+  height: auto;
+  min-height: 150px;
+  max-height: 250px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--global-bg-color);
 }
 
 // Rouge Color Customization
@@ -1357,6 +1520,181 @@ ninja-keys::part(ninja-input-wrapper) {
   border: 1px solid var(--global-divider-color);
   border-radius: 6px;
   padding: 10px;
+}
+
+// Responsive design for selected publications section
+@media (max-width: 768px) {
+  .selected-publications-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    
+    h2 {
+      margin-bottom: 0.5rem !important;
+    }
+    
+    .btn {
+      align-self: stretch;
+      text-align: center;
+    }
+  }
+}
+
+// Selected publications styling
+.selected-publication {
+  border-left: 4px solid var(--global-theme-color);
+  padding-left: 15px;
+  margin-left: -15px;
+  background: linear-gradient(90deg, 
+    rgba(var(--global-theme-color-rgb), 0.05) 0%, 
+    rgba(var(--global-theme-color-rgb), 0.02) 50%, 
+    transparent 100%);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 2rem;
+  
+  // Natural image scaling for selected publications
+  .abbr {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    .preview-container {
+      width: 100%;
+      margin-bottom: 1rem;
+      
+      img {
+        width: 100%;
+        height: auto; // Let height scale naturally
+        max-height: 250px; // Slightly smaller max for selected publications
+        object-fit: contain; // Maintain aspect ratio without cropping
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease;
+      }
+      
+      img:hover {
+        transform: scale(1.02);
+      }
+    }
+    
+    abbr {
+      margin-bottom: 8px;
+      display: inline-block;
+      font-size: 0.9em;
+      padding: 6px 10px;
+    }
+  }
+  
+  .teaser {
+    .preview-container {
+      width: 100%;
+      margin-bottom: 1rem;
+      
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+.selected-title {
+  color: var(--global-theme-color) !important;
+  font-weight: 700 !important;
+  font-size: 1.1em !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.3 !important;
+}
+
+.selected-authors {
+  color: var(--global-theme-color) !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.selected-venue {
+  color: var(--global-theme-color) !important;
+  font-style: italic !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.selected-abstract {
+  color: var(--global-text-color) !important;
+  font-size: 0.95em !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.selected-links a {
+  color: var(--global-theme-color) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  margin-right: 0.8rem !important;
+  font-size: 0.9em !important;
+}
+
+.selected-links a:hover {
+  text-decoration: underline !important;
+}
+
+// Badge styling for selected publications
+.selected-publication .badge-category {
+  background: rgba(var(--global-theme-color-rgb), 0.15) !important;
+  color: var(--global-theme-color) !important;
+  border: 1px solid rgba(var(--global-theme-color-rgb), 0.3) !important;
+  font-weight: 600 !important;
+  font-size: 0.8em !important;
+  padding: 4px 8px !important;
+  margin-right: 6px !important;
+  margin-bottom: 4px !important;
+  border-radius: 4px !important;
+}
+
+// Venue badge styling
+.badge.rounded {
+  &:not([style*="color:"]) {
+    color: #2563eb !important;
+    background-color: #ffffff !important;
+    border: 1px solid #000000 !important;
+    font-weight: bold !important;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .selected-publication {
+    .abbr img {
+      min-height: 120px;
+      max-height: 200px;
+    }
+    
+    .teaser img {
+      min-height: 120px;
+      max-height: 200px;
+    }
+  }
+  
+  .publications {
+    .abbr img {
+      min-height: 120px;
+      max-height: 200px;
+    }
+    
+    .teaser img {
+      min-height: 120px;
+      max-height: 200px;
+    }
+    
+    .col.abbr {
+      min-width: auto;
+      max-width: none;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 // Responsive design for selected publications section

@@ -201,7 +201,7 @@ collections:
 announcements:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 10 # leave blank to include all the news in the `_news` folder
+  limit: 15 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
@@ -333,8 +333,27 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
+  group_by: category, year
+  group_order: ascending, descending
+  sort_by: year, month, title
+  order: descending, descending, ascending
+
+  # Configuration for category display
+  type_names:
+    multimodal_learning: "Multimodal Learning & Vision-Language Models"
+    continual_learning: "Continual Learning"
+    image_generation: "Image Generation & Synthesis"
+    computer_vision: "Computer Vision & Scene Understanding"
+    text_detection: "Text Detection & Recognition"
+
+  # Order of categories (this will be respected in the grouping)
+  type_order: [
+    "Multimodal Learning",
+    "Continual Learning", 
+    "Image Generation",
+    "Computer Vision",
+    "Text Detection"
+  ]
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
@@ -348,7 +367,6 @@ enable_publication_badges:
 filtered_bibtex_keywords:
   [
     abbr,
-    abstract,
     additional_info,
     altmetric,
     annotation,

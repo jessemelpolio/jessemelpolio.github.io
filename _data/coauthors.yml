@@ -110,6 +110,26 @@
 #   - firstname: ["Chaohui"]
 #     url: https://scholar.google.com/citations?user=9rEQBo8AAAAJ&hl=en
 
-# "wang":
-#   - firstname: ["Fan"]
-#     url: https://scholar.google.com/citations?user=WBOxc_0AAAAJ&hl=en
+"gong":
+  - firstname: ["Yiming"]
+    url: https://scholar.google.com.au/citations?user=e2u6hRoAAAAJ&hl=en
+
+"cho":
+  - firstname: ["Joshua"]
+    url: https://scholar.google.com/citations?user=abeSWQsAAAAJ&hl=en
+
+"xie":
+  - firstname: ["Xudong"]
+    url: https://scholar.google.com/citations?user=jTrfuH8AAAAJ&hl=en
+
+"bao":
+  - firstname: ["Zhipeng"]
+    url: https://zpbao.github.io
+
+"xu_zhiliang":
+  - firstname: ["Zhiliang"]
+    url: https://seanseattle.github.io
+
+"liu_yang":
+  - firstname: ["Yang"]
+    url: https://mruil.github.io

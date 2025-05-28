@@ -1,3 +1,374 @@
 <div class="publications">
-  {% bibliography -f {{ site.scholar.bibliography }} --query @*[selected=true]* %}
+  <!-- Category Filter Expansion for Selected Publications -->
+  <div class="category-expansion">
+    <div class="category-expansion-header" onclick="toggleCategoryExpansion()">
+      <span>🔍 Filter by Research Category</span>
+      <i class="fas fa-chevron-down" id="category-chevron" style="transform: rotate(180deg);"></i>
+    </div>
+    <div class="category-expansion-content expanded" id="category-expansion-content">
+      <div class="category-buttons-container">
+        <button class="category-filter-btn active" onclick="filterByCategory('all')" data-category="all">
+          All Categories
+        </button>
+        <button class="category-filter-btn" onclick="filterByCategory('Multimodal Learning')" data-category="Multimodal Learning">
+          Multimodal Learning
+        </button>
+        <button class="category-filter-btn" onclick="filterByCategory('Continual/Dynamic Learning')" data-category="Continual/Dynamic Learning">
+          Continual/Dynamic Learning
+        </button>
+        <button class="category-filter-btn" onclick="filterByCategory('Image Generation')" data-category="Image Generation">
+          Image Generation
+        </button>
+        <button class="category-filter-btn" onclick="filterByCategory('Detection/Segmentation')" data-category="Detection/Segmentation">
+          Detection/Segmentation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Selected Publications -->
+  <div class="selected-publications-list">
+    {% bibliography --query @*[selected=true]* --group_by year %}
+  </div>
 </div>
+
+<style>
+.category-expansion {
+  background: rgba(var(--global-theme-color-rgb), 0.02);
+  border: 1px solid rgba(var(--global-theme-color-rgb), 0.1);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.category-expansion-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(var(--global-theme-color-rgb), 0.05);
+  border-bottom: 1px solid rgba(var(--global-theme-color-rgb), 0.1);
+  font-weight: 600;
+  color: var(--global-theme-color);
+  transition: all 0.2s ease;
+}
+
+.category-expansion-header:hover {
+  background: rgba(var(--global-theme-color-rgb), 0.08);
+}
+
+.category-expansion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 20px;
+}
+
+.category-expansion-content.expanded {
+  max-height: 200px;
+  padding: 15px 20px;
+}
+
+.category-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.category-filter-btn {
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+  color: var(--global-theme-color);
+  border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.category-filter-btn:hover {
+  background: rgba(var(--global-theme-color-rgb), 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(var(--global-theme-color-rgb), 0.2);
+}
+
+.category-filter-btn.active {
+  background: var(--global-theme-color);
+  color: white;
+  border-color: var(--global-theme-color);
+  box-shadow: 0 2px 12px rgba(var(--global-theme-color-rgb), 0.3);
+}
+
+.publication-item {
+  transition: all 0.3s ease;
+}
+
+.publication-item.hidden {
+  display: none;
+}
+
+/* Fix spacing issues with selected publications */
+.selected-publications-list .row {
+  margin-bottom: 1.5rem !important;
+}
+
+.selected-publications-list .col {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Remove extra white space under images */
+.selected-publications-list .abbr img,
+.selected-publications-list .teaser img {
+  display: block;
+  margin-bottom: 0;
+}
+
+.selected-publications-list .abbr {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .category-expansion-header {
+    padding: 12px 15px;
+    font-size: 0.9em;
+  }
+  
+  .category-expansion-content.expanded {
+    padding: 12px 15px;
+  }
+  
+  .category-buttons-container {
+    gap: 6px;
+  }
+  
+  .category-filter-btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+}
+</style>
+
+<script>
+function toggleCategoryExpansion() {
+  const content = document.getElementById('category-expansion-content');
+  const chevron = document.getElementById('category-chevron');
+  
+  if (content.classList.contains('expanded')) {
+    content.classList.remove('expanded');
+    chevron.style.transform = 'rotate(0deg)';
+  } else {
+    content.classList.add('expanded');
+    chevron.style.transform = 'rotate(180deg)';
+  }
+}
+
+function sortYearHeaders() {
+  const publications = document.querySelector('.selected-publications-list');
+  if (!publications) {
+    console.log('No publications container found');
+    return;
+  }
+  
+  // Get all year headers
+  const yearHeaders = publications.querySelectorAll('h2.bibliography');
+  console.log('Found year headers:', yearHeaders.length);
+  
+  if (yearHeaders.length === 0) {
+    console.log('No year headers found');
+    return;
+  }
+  
+  const elements = [];
+  
+  yearHeaders.forEach((header, index) => {
+    const yearText = header.textContent.trim();
+    const year = parseInt(yearText);
+    console.log(`Processing year header ${index}: "${yearText}" -> ${year}`);
+    
+    if (isNaN(year)) {
+      console.log(`Skipping invalid year: ${yearText}`);
+      return;
+    }
+    
+    const yearContent = [header];
+    
+    // Collect all elements until the next year header
+    let nextElement = header.nextElementSibling;
+    while (nextElement && !nextElement.matches('h2.bibliography')) {
+      yearContent.push(nextElement);
+      nextElement = nextElement.nextElementSibling;
+    }
+    
+    console.log(`Year ${year} has ${yearContent.length} elements`);
+    
+    elements.push({
+      year: year,
+      elements: yearContent
+    });
+  });
+  
+  console.log('Elements before sorting:', elements.map(e => e.year));
+  
+  // Sort by year descending (newest first)
+  elements.sort((a, b) => {
+    console.log(`Comparing ${a.year} vs ${b.year}`);
+    return b.year - a.year;
+  });
+  
+  console.log('Elements after sorting:', elements.map(e => e.year));
+  
+  // Create a temporary container to hold sorted elements
+  const tempContainer = document.createElement('div');
+  
+  // Move all elements to temp container in sorted order
+  elements.forEach((item, index) => {
+    console.log(`Appending year ${item.year} at position ${index}`);
+    item.elements.forEach(el => {
+      tempContainer.appendChild(el);
+    });
+  });
+  
+  // Move all elements back to the publications container
+  while (tempContainer.firstChild) {
+    publications.appendChild(tempContainer.firstChild);
+  }
+  
+  console.log('Year sorting completed');
+}
+
+function filterByCategory(category) {
+  console.log(`🔍 [SELECTED] FILTERING: Starting filter for category: "${category}"`);
+  
+  // Update active button
+  document.querySelectorAll('.category-filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  const activeButton = document.querySelector(`[data-category="${category}"]`);
+  if (activeButton) {
+    activeButton.classList.add('active');
+    console.log(`✅ [SELECTED] FILTERING: Active button set for ${category}`);
+  } else {
+    console.error(`❌ [SELECTED] FILTERING: Could not find button for category: ${category}`);
+  }
+  
+  // Get all publication list items - be very specific
+  const publications = document.querySelectorAll('.selected-publications-list ol.bibliography > li');
+  const yearHeaders = document.querySelectorAll('.selected-publications-list h2.bibliography');
+  
+  console.log(`📊 [SELECTED] FILTERING: Found ${publications.length} publications and ${yearHeaders.length} year headers`);
+  
+  if (publications.length === 0) {
+    console.error('❌ [SELECTED] FILTERING: No publications found! Check selector.');
+    return;
+  }
+  
+  // Track which years have visible publications
+  const visibleYears = new Set();
+  
+  publications.forEach((publicationItem, index) => {
+    const publicationId = publicationItem.id || `selected-publication-${index}`;
+    console.log(`🔍 [SELECTED] FILTERING: Processing publication ${index} (${publicationId})`);
+    
+    if (category === 'all') {
+      publicationItem.style.display = 'list-item';
+      console.log(`✅ [SELECTED] FILTERING: Showing publication ${index} (showing all)`);
+      
+      // Find the year for this publication
+      const yearHeader = findYearHeaderForPublication(publicationItem);
+      if (yearHeader) {
+        const year = yearHeader.textContent.trim();
+        visibleYears.add(year);
+      }
+    } else {
+      // Look for category tags in the publication item
+      const categoryTags = publicationItem.querySelectorAll('[data-category]');
+      console.log(`🏷️ [SELECTED] FILTERING: Publication ${index}: Found ${categoryTags.length} category tags`);
+      
+      let hasCategory = false;
+      
+      categoryTags.forEach((tag, tagIndex) => {
+        const dataCategory = tag.getAttribute('data-category');
+        const tagText = tag.textContent.trim();
+        console.log(`   📝 [SELECTED] Tag ${tagIndex}: data-category="${dataCategory}", text="${tagText}"`);
+        
+        if (dataCategory === category || tagText === category) {
+          hasCategory = true;
+          console.log(`   ✅ [SELECTED] FILTERING: MATCH found for category: ${category}`);
+        }
+      });
+      
+      if (hasCategory) {
+        publicationItem.style.display = 'list-item';
+        console.log(`✅ [SELECTED] FILTERING: Showing publication ${index} - has category ${category}`);
+        
+        // Find the year for this publication
+        const yearHeader = findYearHeaderForPublication(publicationItem);
+        if (yearHeader) {
+          const year = yearHeader.textContent.trim();
+          visibleYears.add(year);
+        }
+      } else {
+        publicationItem.style.display = 'none';
+        console.log(`❌ [SELECTED] FILTERING: Hiding publication ${index} - no category ${category}`);
+      }
+    }
+  });
+  
+  console.log('📅 [SELECTED] FILTERING: Visible years:', Array.from(visibleYears));
+  
+  // Show/hide year headers based on whether they have visible publications
+  yearHeaders.forEach(header => {
+    const year = header.textContent.trim();
+    const shouldShow = visibleYears.has(year);
+    header.style.display = shouldShow ? 'block' : 'none';
+    console.log(`📅 [SELECTED] FILTERING: Year header ${year}: ${shouldShow ? 'visible' : 'hidden'}`);
+  });
+  
+  console.log(`🎯 [SELECTED] FILTERING: Completed filtering for category: ${category}`);
+}
+
+function findYearHeaderForPublication(element) {
+  let currentElement = element.previousElementSibling;
+  
+  while (currentElement) {
+    if (currentElement.tagName === 'H2' && currentElement.classList.contains('bibliography')) {
+      return currentElement;
+    }
+    currentElement = currentElement.previousElementSibling;
+  }
+  
+  return null;
+}
+
+// Initialize sorting when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOMContentLoaded: Starting initialization...');
+  
+  // Wait for Jekyll Scholar to finish rendering
+  setTimeout(() => {
+    console.log('Starting initial sort...');
+    sortYearHeaders();
+  }, 500);
+  
+  // Also try again after a longer delay in case Jekyll Scholar takes time
+  setTimeout(() => {
+    console.log('Starting backup sort...');
+    sortYearHeaders();
+  }, 2000);
+});
+
+// Also try to sort when the window loads
+window.addEventListener('load', function() {
+  console.log('Window loaded: Starting sort...');
+  setTimeout(() => {
+    sortYearHeaders();
+  }, 100);
+});
+</script>

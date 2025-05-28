@@ -1,6 +1,161 @@
 ---
 layout: default
 ---
+
+<style>
+.page-sidebar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--global-text-color-light, #d1d5da);
+}
+
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.sidebar-nav li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sidebar-nav li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--global-text-color, #586069);
+  border: 2px solid var(--global-bg-color, #fff);
+  box-shadow: 0 0 0 2px var(--global-text-color-light, #d1d5da);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar-nav li.major::before {
+  background-color: var(--global-text-color, #24292e);
+  width: 12px;
+  height: 12px;
+  left: 3px;
+  top: 5px;
+}
+
+.sidebar-nav li.active::before {
+  background-color: var(--global-theme-color, #0366d6);
+  box-shadow: 0 0 0 2px var(--global-theme-color, #0366d6);
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 0.25rem 0.5rem 0.25rem 1.5rem;
+  color: var(--global-text-color, #586069);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-left: 0.5rem;
+  text-shadow: 0 0 3px var(--global-bg-color, rgba(255,255,255,0.8));
+}
+
+.sidebar-nav a:hover {
+  color: var(--global-text-color, #24292e);
+}
+
+.sidebar-nav a.active {
+  color: var(--global-theme-color, #0366d6);
+  font-weight: 600;
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .timeline-container::before {
+    background-color: #484f58;
+  }
+  
+  .sidebar-nav li::before {
+    background-color: #8b949e;
+    border-color: #0d1117;
+    box-shadow: 0 0 0 2px #484f58;
+  }
+  
+  .sidebar-nav li.major::before {
+    background-color: #f0f6fc;
+  }
+  
+  .sidebar-nav a {
+    color: #f0f6fc;
+    text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  }
+  
+  .sidebar-nav a:hover {
+    color: #ffffff;
+  }
+}
+
+/* Alternative: Use CSS custom properties if available */
+html[data-theme="dark"] .timeline-container::before {
+  background-color: #484f58;
+}
+
+html[data-theme="dark"] .sidebar-nav li::before {
+  background-color: #8b949e;
+  border-color: #0d1117;
+  box-shadow: 0 0 0 2px #484f58;
+}
+
+html[data-theme="dark"] .sidebar-nav li.major::before {
+  background-color: #f0f6fc;
+}
+
+html[data-theme="dark"] .sidebar-nav a {
+  color: #f0f6fc;
+  text-shadow: 0 0 3px rgba(0,0,0,0.8);
+}
+
+html[data-theme="dark"] .sidebar-nav a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .page-sidebar {
+    display: none;
+  }
+}
+
+/* Hide sidebar on smaller screens */
+@media (max-width: 768px) {
+  .page-sidebar {
+    display: none;
+  }
+}
+</style>
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -60,7 +215,7 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <div style="margin-top: 3rem;">
+      <div style="margin-top: 3rem;" id="selected-publications">
         <div class="selected-publications-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
           <h2 style="margin: 0;">
             <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
@@ -72,6 +227,35 @@ layout: default
         {% include selected_papers.liquid %}
       </div>
     {% endif %}
+
+    <!-- Collaborations -->
+    <div style="margin-top: 3rem;" id="collaborations">
+      <h2>Collaborations</h2>
+      <p>I've had the privilege of mentoring several talented students throughout my Ph.D. journey:</p>
+      <ul>
+        <li><strong><a href="https://scholar.google.com/citations?user=C04zJHEAAAAJ&hl=en">Mengde Xu</a></strong> — Computer Vision and Deep Learning</li>
+        <li><strong><a href="https://seanseattle.github.io">Zhiliang Xu</a></strong> — Image Generation and Face Synthesis</li>
+        <li><strong><a href="https://scholar.google.com.hk/citations?user=VVU574oAAAAJ&hl=zh-CN">Zijie Wu</a></strong> — Style Transfer and Generative Models</li>
+        <li><strong><a href="https://mruil.github.io">Yang Liu</a></strong> — Watermark Removal and Image Processing</li>
+        <li><strong><a href="https://scholar.google.com/citations?user=jTrfuH8AAAAJ&hl=en">Xudong Xie</a></strong> — Computer Vision Research</li>
+        <li><strong><a href="https://scholar.google.com.au/citations?user=e2u6hRoAAAAJ&hl=en">Yiming Gong</a></strong> — Machine Learning and Computer Vision</li>
+        <li><strong><a href="https://scholar.google.com/citations?user=abeSWQsAAAAJ&hl=en">Joshua Cho</a></strong> — Computational Photography and Image Enhancement</li>
+      </ul>
+      
+      <p>I'm actively collaborating with current researchers:</p>
+      <ul>
+        <li><strong><a href="https://avaxiao.github.io">Yao Xiao</a></strong> — Advanced Computer Vision Techniques</li>
+        <li><strong><a href="https://zpbao.github.io">Zhipeng Bao</a></strong> — Deep Learning and Computer Vision</li>
+      </ul>
+    </div>
+
+    <!-- Service -->
+    <div style="margin-top: 3rem;" id="service">
+      <h2>Service</h2>
+      <p><strong>Conference Reviewer:</strong> CVPR, ICCV, ECCV, ICLR, NeurIPS, AAAI, IJCAI, BMVC, WACV, and others</p>
+      <p><strong>Journal Reviewer:</strong> TPAMI, IJCV, TIP, PR, and others</p>
+      <p><strong>Co-organizer:</strong> <a href="https://vision.cs.illinois.edu/vision_website/">UIUC External Speaker Series</a> — Interested speakers are welcome to reach out to register for upcoming sessions</p>
+    </div>
 
     <!-- Social -->
     {% if page.social %}
@@ -86,4 +270,84 @@ layout: default
       {% include scripts/newsletter.liquid center=true %}
     {% endif %}
   </article>
+
+  <!-- Sidebar Navigation -->
+  <div class="page-sidebar">
+    <nav class="timeline-container">
+      <ul class="sidebar-nav">
+        <li class="major"><a href="#research-focus" data-section="research-focus">Research Focus</a></li>
+        <li class="major"><a href="#recent-highlights" data-section="recent-highlights">Recent Highlights</a></li>
+        <li class="major"><a href="#selected-publications" data-section="selected-publications">Selected Publications</a></li>
+        <li><a href="#collaborations" data-section="collaborations">Collaborations</a></li>
+        <li><a href="#service" data-section="service">Service</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+    const sidebarItems = document.querySelectorAll('.sidebar-nav li');
+    const sections = document.querySelectorAll('[id]');
+    
+    // Smooth scrolling
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Highlight current section on scroll
+    function highlightCurrentSection() {
+      let current = '';
+      const scrollPos = window.scrollY + 100; // offset for better UX
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      // Remove all active classes
+      sidebarLinks.forEach(link => link.classList.remove('active'));
+      sidebarItems.forEach(item => item.classList.remove('active'));
+      
+      // Add active class to current section
+      sidebarLinks.forEach((link, index) => {
+        if (link.getAttribute('data-section') === current) {
+          link.classList.add('active');
+          sidebarItems[index].classList.add('active');
+        }
+      });
+    }
+    
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          highlightCurrentSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial highlighting
+    highlightCurrentSection();
+  });
+  </script>
 </div>

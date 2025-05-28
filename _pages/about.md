@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Welcome! I'm Zhen Zhu, a final year Ph.D. candidate at the [University of Illinois at Urbana-Champaign (UIUC)](https://illinois.edu/), working with Professor [Derek Hoiem](https://dhoiem.cs.illinois.edu/). I received my Master's degree from [HUST](http://english.hust.edu.cn/) in June 2020, supervised by Professor [Xiang Bai](https://xbai.vlrlab.net). 
+Welcome! I'm currently a final year Ph.D. candidate at the [University of Illinois at Urbana-Champaign (UIUC)](https://illinois.edu/), working with Professor [Derek Hoiem](https://dhoiem.cs.illinois.edu/). I received my Master's degree from [HUST](http://english.hust.edu.cn/) in June 2020, supervised by Professor [Xiang Bai](https://xbai.vlrlab.net). 
 
 <!-- Prior to that, I obtained my Bachelor's degree from the School of Computer Science and Technology, HUST in 2017.  -->
 
@@ -47,6 +47,6 @@ My goal is to develop adaptive and trustworthy learning systems that **adapt con
 
 <!-- I'm excited about connecting with people and fostering innovative research especially in interdisciplinary fields such as <b>computer vision</b>, <b>cognitive science</b>, and <b>robotics</b>. -->
 
-I am currently on the job market for tenure-track faculty, postdoctoral, and research scientist positions beginning in early 2026. Feel free to reach out if our interests align.
+I am currently on the job market for tenure-track faculty, postdoctoral, and research scientist positions beginning in around early 2026. Feel free to reach out if our interests align.
 
-More about me: [CV](/cv/) · [Google Scholar](https://scholar.google.com/citations?user=nD6_ot4AAAAJ) · [GitHub](https://github.com/jessemelpolio)
+More about me: [CV](/cv/) · [Google Scholar](https://scholar.google.com/citations?user=nD6_ot4AAAAJ)

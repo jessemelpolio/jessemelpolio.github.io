@@ -315,6 +315,60 @@ nav_order: 2
     padding: 0.75rem;
   }
 }
+
+/* Joint first author styling */
+.joint-first-author {
+  position: relative;
+  padding: 1px 2px !important;
+  background: linear-gradient(135deg, 
+    rgba(var(--global-theme-color-rgb), 0.15), 
+    rgba(var(--global-theme-color-rgb), 0.08)) !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease !important;
+}
+
+.joint-first-author:hover {
+  background: linear-gradient(135deg, 
+    rgba(var(--global-theme-color-rgb), 0.25), 
+    rgba(var(--global-theme-color-rgb), 0.15)) !important;
+  transform: translateY(-1px) !important;
+}
+
+.joint-first-author sup {
+  color: var(--global-theme-color) !important;
+  font-weight: bold !important;
+  font-size: 0.85em !important;
+}
+
+/* Dark mode support for joint first author */
+html[data-theme="dark"] .joint-first-author {
+  background: linear-gradient(135deg, 
+    rgba(var(--global-theme-color-rgb), 0.3), 
+    rgba(var(--global-theme-color-rgb), 0.15)) !important;
+}
+
+/* Accessibility improvements */
+.joint-first-author {
+  outline: none !important;
+}
+
+.joint-first-author:focus {
+  outline: 2px solid var(--global-theme-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Additional info styling improvements for joint first author */
+.additional-info-joint {
+  background: rgba(var(--global-theme-color-rgb), 0.05);
+  border-left: 3px solid var(--global-theme-color);
+  padding: 8px 12px;
+  margin: 8px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 1.1em !important;
+  font-weight: bold !important;
+  font-style: italic;
+  color: var(--global-theme-color);
+}
 </style>
 
 <script>

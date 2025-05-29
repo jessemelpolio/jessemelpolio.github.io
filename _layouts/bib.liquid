@@ -105,7 +105,7 @@
         {%- endif -%}
         
         <!-- Oral Presentation Badge (inline with year and venue) -->
-        {% if entry.additional_info contains "Oral" %}
+        {% if entry.award %}
           <span style="
             background: linear-gradient(135deg, #ff6b6b, #ee5a24); 
             color: white; 
@@ -120,7 +120,7 @@
             display: inline-block;
             flex-shrink: 0;
           ">
-            🏆 ORAL PRESENTATION
+            🏆 {{ entry.award }}
           </span>
         {% endif %}
       </div>
@@ -155,6 +155,11 @@
           {% assign author_array_limit = site.max_author_limit %}
         {% endif %}
 
+        {%- assign is_joint_first_author_paper = false -%}
+        {% if entry.additional_info contains "Joint first author" %}
+          {%- assign is_joint_first_author_paper = true -%}
+        {% endif %}
+
         {%- for author in entry.author_array limit: author_array_limit -%}
           {% assign author_is_self = false %}
           {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
@@ -175,24 +180,28 @@
             {% endfor %}
           {%- endif -%}
 
+          {%- assign is_joint_first_author = false -%}
+          {% if is_joint_first_author_paper and forloop.index <= 2 %}
+            {%- assign is_joint_first_author = true -%}
+          {% endif %}
+
           {%- if forloop.length > 1 -%}
             {% if forloop.first == false %},&nbsp;{% endif %}
             {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
           {% endif %}
           {%- if author_is_self -%}
-            <strong style="font-weight: 900; text-decoration: underline; text-underline-offset: 2px;">
-              {{- author.first }}
-              {{ author_last_html -}}
+            <strong style="font-weight: 900; text-decoration: underline; text-underline-offset: 2px;" {% if is_joint_first_author %}class="joint-first-author"{% endif %}>
+              {{ author.first }} {{ author.last }}{%- if is_joint_first_author -%}<sup>*</sup>{%- endif -%}
             </strong>
           {%- else -%}
             {%- if coauthor_url -%}
-              <a href="{{ coauthor_url }}">
-                {{- author.first }}
-                {{ author_last_html -}}
+              <a href="{{ coauthor_url }}" {% if is_joint_first_author %}class="joint-first-author" style="text-decoration: none;"{% endif %}>
+                {{ author.first }} {{ author.last }}{%- if is_joint_first_author -%}<sup>*</sup>{%- endif -%}
               </a>
             {%- else -%}
-              {{- author.first }}
-              {{ author_last_html -}}
+              <span {% if is_joint_first_author %}class="joint-first-author"{% endif %}>
+                {{ author.first }} {{ author.last }}{%- if is_joint_first_author -%}<sup>*</sup>{%- endif -%}
+              </span>
             {% endif %}
           {%- endif -%}
         {% endfor %}
@@ -262,7 +271,11 @@
         {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
       {% endif -%}
       {% if entry.additional_info and entry.additional_info != ". *Oral Presentation" %}
-        {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
+        {% if entry.additional_info contains "Joint first author" %}
+          {% capture entrytype %}{{ entrytype }}<span style="font-size: 1.1em; font-weight: bold; color: var(--global-theme-color);">{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endcapture %}
+        {% else %}
+          {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
+        {% endif %}
       {% endif %}
       {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
       {% if hook_exists == 'true' %}
@@ -282,11 +295,6 @@
 
       <!-- Links/Buttons -->
       <div class="links" style="margin-bottom: 10px;">
-        {% if entry.award %}
-          <a class="award btn btn-sm z-depth-0" role="button">
-            {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
-          </a>
-        {% endif %}
         {% if entry.arxiv %}
           <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
         {% endif %}

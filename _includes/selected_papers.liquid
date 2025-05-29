@@ -362,6 +362,19 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Starting backup sort...');
     sortYearHeaders();
   }, 2000);
+  
+  // Add click handlers for category tags in selected papers
+  const categoryTags = document.querySelectorAll('.selected-publications-list .clickable-tag[data-category]');
+  categoryTags.forEach(function(tag) {
+    tag.addEventListener('click', function(e) {
+      e.preventDefault();
+      const category = this.getAttribute('data-category');
+      
+      // Navigate to publications page with category filter
+      const publicationsUrl = '/publications/#category=' + encodeURIComponent(category);
+      window.location.href = publicationsUrl;
+    });
+  });
 });
 
 // Also try to sort when the window loads

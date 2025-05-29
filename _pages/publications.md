@@ -9,8 +9,7 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
-<!-- Bibsearch Feature -->
-
+<!-- Enhanced Bibsearch Feature -->
 {% include bib_search.liquid %}
 
 <div class="publications">
@@ -37,8 +36,8 @@ nav_order: 2
       <button class="category-filter-btn" onclick="filterPublicationsByCategory('Image Generation')" data-category="Image Generation">
         Image Generation
       </button>
-      <button class="category-filter-btn" onclick="filterPublicationsByCategory('Object Detection/Segmentation')" data-category="Object Detection/Segmentation">
-        Object Detection/Segmentation
+      <button class="category-filter-btn" onclick="filterPublicationsByCategory('Detection/Segmentation')" data-category="Object Detection/Segmentation">
+        Detection/Segmentation
       </button>
     </div>
   </div>
@@ -409,17 +408,34 @@ function sortPublicationsYearHeaders() {
 function filterPublicationsByCategory(category) {
   console.log(`🔍 FILTERING: Starting filter for category: "${category}"`);
   
+  // Update URL hash (but don't trigger hashchange event)
+  const newHash = category === 'all' ? '' : '#category=' + encodeURIComponent(category);
+  if (window.location.hash !== newHash) {
+    history.replaceState(null, null, newHash === '' ? window.location.pathname : window.location.pathname + newHash);
+  }
+  
   // Update active button
   document.querySelectorAll('.category-filter-btn').forEach(btn => {
     btn.classList.remove('active');
   });
   
+  // Find the correct button by data-category attribute
   const activeButton = document.querySelector(`[data-category="${category}"]`);
   if (activeButton) {
     activeButton.classList.add('active');
     console.log(`✅ FILTERING: Active button set for ${category}`);
   } else {
-    console.error(`❌ FILTERING: Could not find button for category: ${category}`);
+    console.log(`⚠️ FILTERING: Could not find button for category: ${category}, trying to find by text content`);
+    
+    // Fallback: try to find button by text content
+    const buttons = document.querySelectorAll('.category-filter-btn');
+    buttons.forEach(btn => {
+      if (btn.textContent.trim() === category || 
+          (category === 'all' && btn.textContent.trim() === 'All Categories')) {
+        btn.classList.add('active');
+        console.log(`✅ FILTERING: Active button set via text match for ${category}`);
+      }
+    });
   }
   
   // Get all publication list items - be very specific
@@ -519,12 +535,35 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     console.log('Starting initial publications sort...');
     sortPublicationsYearHeaders();
+    
+    // Check for category filter in URL hash
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#category=')) {
+      const category = decodeURIComponent(hash.replace('#category=', ''));
+      console.log('Found category in URL hash:', category);
+      
+      // Apply the filter
+      filterPublicationsByCategory(category);
+      
+      // Scroll to the filter section to show the active filter
+      const filterSection = document.querySelector('.category-expansion');
+      if (filterSection) {
+        filterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   }, 500);
   
   // Also try again after a longer delay in case Jekyll Scholar takes time
   setTimeout(() => {
     console.log('Starting backup publications sort...');
     sortPublicationsYearHeaders();
+    
+    // Apply URL hash filter again if needed (backup)
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#category=')) {
+      const category = decodeURIComponent(hash.replace('#category=', ''));
+      filterPublicationsByCategory(category);
+    }
   }, 2000);
 });
 
@@ -533,6 +572,26 @@ window.addEventListener('load', function() {
   console.log('Publications page window loaded: Starting sort...');
   setTimeout(() => {
     sortPublicationsYearHeaders();
+    
+    // Apply URL hash filter if needed
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#category=')) {
+      const category = decodeURIComponent(hash.replace('#category=', ''));
+      filterPublicationsByCategory(category);
+    }
   }, 100);
+});
+
+// Handle hash changes (if user manually changes URL or browser back/forward)
+window.addEventListener('hashchange', function() {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#category=')) {
+    const category = decodeURIComponent(hash.replace('#category=', ''));
+    console.log('Hash changed, filtering by category:', category);
+    filterPublicationsByCategory(category);
+  } else if (hash === '' || hash === '#') {
+    // Show all if hash is cleared
+    filterPublicationsByCategory('all');
+  }
 });
 </script>

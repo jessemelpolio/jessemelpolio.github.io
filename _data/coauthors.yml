@@ -115,7 +115,7 @@
 "xiao":
   - firstname: ["Yao"]
     url: https://avaxiao.github.io
-    description: "Advanced Computer Vision Techniques"
+    description: "Video Understanding and Multimodal Learning"
     collaboration_type: "current"
 
 "wu":
@@ -131,7 +131,7 @@
 "gong":
   - firstname: ["Yiming"]
     url: https://www.linkedin.com/in/yiming-gong-145776263
-    description: "Machine Learning and Computer Vision"
+    description: "Machine Learning and Image Editing"
     collaboration_type: "former_mentee"
 
 "cho":
@@ -143,11 +143,11 @@
 "xie":
   - firstname: ["Xudong"]
     url: https://scholar.google.com/citations?user=jTrfuH8AAAAJ&hl=en
-    description: "Computer Vision Research"
+    description: "Texture Synthesis"
     collaboration_type: "former_mentee"
 
 "bao":
   - firstname: ["Zhipeng"]
     url: https://zpbao.github.io
-    description: "Deep Learning and Computer Vision"
+    description: "Multimodal Generation"
     collaboration_type: "current"

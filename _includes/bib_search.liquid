@@ -1,4 +1,258 @@
 {% if site.bib_search %}
   <script src="{{ '/assets/js/bibsearch.js' | relative_url | bust_file_cache }}" type="module"></script>
-  <input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter">
+  
+  <div class="search-container" style="margin-bottom: 2rem;">
+    <div style="position: relative; max-width: 600px;">
+      <input 
+        type="text" 
+        id="bibsearch" 
+        spellcheck="false" 
+        autocomplete="off" 
+        class="search bibsearch-form-input" 
+        placeholder="Search papers by title, author, category, venue, or keywords..."
+        style="
+          width: 100%;
+          padding: 12px 20px 12px 45px;
+          font-size: 1rem;
+          border: 2px solid rgba(var(--global-theme-color-rgb), 0.2);
+          border-radius: 25px;
+          background-color: var(--global-bg-color);
+          color: var(--global-text-color);
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        "
+        onmouseover="this.style.borderColor='rgba(var(--global-theme-color-rgb), 0.4)'"
+        onmouseout="this.style.borderColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+        onfocus="this.style.borderColor='var(--global-theme-color)'; this.style.boxShadow='0 0 0 3px rgba(var(--global-theme-color-rgb), 0.1), 0 4px 20px rgba(0, 0, 0, 0.1)'"
+        onblur="this.style.borderColor='rgba(var(--global-theme-color-rgb), 0.2)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.05)'"
+      >
+      
+      <!-- Search icon -->
+      <div style="
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(var(--global-theme-color-rgb), 0.6);
+        pointer-events: none;
+      ">
+        <i class="fas fa-search" style="font-size: 1rem;"></i>
+      </div>
+      
+      <!-- Clear button (hidden by default) -->
+      <button 
+        type="button" 
+        id="clear-search" 
+        style="
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: rgba(var(--global-text-color-rgb), 0.5);
+          cursor: pointer;
+          padding: 5px;
+          border-radius: 50%;
+          display: none;
+          transition: all 0.2s ease;
+        "
+        onmouseover="this.style.backgroundColor='rgba(var(--global-text-color-rgb), 0.1)'"
+        onmouseout="this.style.backgroundColor='transparent'"
+      >
+        <i class="fas fa-times" style="font-size: 0.9rem;"></i>
+      </button>
+    </div>
+    
+    <!-- Search suggestions -->
+    <div class="search-suggestions" style="
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: rgba(var(--global-text-color-rgb), 0.6);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    ">
+      <span style="margin-right: 0.5rem;">Try:</span>
+      
+      <button class="suggestion-tag" data-search="Multimodal Learning" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">Multimodal Learning</button>
+      
+      <button class="suggestion-tag" data-search="Continual Learning" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">Continual Learning</button>
+      
+      <button class="suggestion-tag" data-search="CVPR" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">CVPR</button>
+      
+      <button class="suggestion-tag" data-search="ECCV" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">ECCV</button>
+      
+      <button class="suggestion-tag" data-search="Under Review" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">Under Review</button>
+      
+      <button class="suggestion-tag" data-search="2024" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">2024</button>
+      
+      <button class="suggestion-tag" data-search="2020" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">2020</button>
+      
+      <button class="suggestion-tag" data-search="Zhu" style="
+        background: rgba(var(--global-theme-color-rgb), 0.1);
+        color: var(--global-theme-color);
+        border: 1px solid rgba(var(--global-theme-color-rgb), 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.2)'"
+      onmouseout="this.style.backgroundColor='rgba(var(--global-theme-color-rgb), 0.1)'">Zhu</button>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('bibsearch');
+    const clearButton = document.getElementById('clear-search');
+    const suggestionTags = document.querySelectorAll('.suggestion-tag');
+
+    // Show/hide clear button based on input content
+    if (searchInput) {
+      function toggleClearButton() {
+        if (searchInput.value.trim().length > 0) {
+          clearButton.style.display = 'block';
+        } else {
+          clearButton.style.display = 'none';
+        }
+      }
+
+      searchInput.addEventListener('input', toggleClearButton);
+      searchInput.addEventListener('change', toggleClearButton);
+      
+      // Clear search functionality
+      clearButton.addEventListener('click', function() {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+        clearButton.style.display = 'none';
+      });
+
+      // Suggestion tag functionality
+      suggestionTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+          const searchTerm = this.getAttribute('data-search');
+          searchInput.value = searchTerm;
+          searchInput.dispatchEvent(new Event('input'));
+          searchInput.focus();
+        });
+      });
+
+      // Initial check for clear button
+      toggleClearButton();
+    }
+  });
+  </script>
+
+  <style>
+  /* Enhanced search styling */
+  .search-container .bibsearch-form-input:focus {
+    outline: none;
+  }
+  
+  /* Dark mode adjustments */
+  @media (prefers-color-scheme: dark) {
+    .search-container .bibsearch-form-input {
+      background-color: var(--global-card-bg-color, #1a1a1a) !important;
+      color: var(--global-text-color, #ffffff) !important;
+    }
+  }
+  
+  html[data-theme="dark"] .search-container .bibsearch-form-input {
+    background-color: var(--global-card-bg-color, #1a1a1a) !important;
+    color: var(--global-text-color, #ffffff) !important;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .search-suggestions {
+      justify-content: center;
+    }
+    
+    .search-suggestions .suggestion-tag {
+      font-size: 0.75rem !important;
+      padding: 1px 6px !important;
+    }
+  }
+  </style>
 {% endif %}

@@ -484,6 +484,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+  
+  // Add click handlers for category tags
+  const categoryTags = document.querySelectorAll('.clickable-tag[data-category]');
+  categoryTags.forEach(function(tag) {
+    tag.addEventListener('click', function(e) {
+      e.preventDefault();
+      const category = this.getAttribute('data-category');
+      
+      // Navigate to publications page with category filter
+      // Use URL with hash to trigger filtering
+      const publicationsUrl = '/publications/#category=' + encodeURIComponent(category);
+      window.location.href = publicationsUrl;
+    });
+  });
 });
 
 function toggleAbstract(button) {

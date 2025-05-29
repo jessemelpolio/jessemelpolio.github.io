@@ -28,9 +28,9 @@ My goal is to develop adaptive and trustworthy learning systems that **adapt con
 
 ### Research Focus
 {: #research-focus}
-- **Continual & Dynamic Learning** — algorithms that update in real time without forgetting.  
-- **Multimodal Learning** — large vision-language models that integrate images, text, video, and more.  
-- **Controllable Image Synthesis** — diffusion-based tools for fast, precise and user-directed editing.
+- **Continual & Dynamic Learning** — algorithms that update models in real time without forgetting.  
+- **Multimodal Models** — factual and grounded large multimodal models that integrate images, text, video, etc.  
+- **Controllable Image Synthesis** — autoregressive/diffusion-based models for fast, precise and user-directed editing.
 
 ### Recent Highlights
 {: #recent-highlights}

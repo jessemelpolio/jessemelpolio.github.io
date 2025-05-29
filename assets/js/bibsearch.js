@@ -244,7 +244,9 @@ document.addEventListener("DOMContentLoaded", function () {
           const totalSiblings = ol.querySelectorAll(":scope > li");
 
           if (unloadedSiblings.length === totalSiblings.length) {
-            ol.previousElementSibling?.classList.add("unloaded");
+            if (ol.previousElementSibling) {
+              ol.previousElementSibling.classList.add("unloaded");
+            }
             ol.classList.add("unloaded");
           } else {
             hideFirstGroupingElement = false;

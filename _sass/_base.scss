@@ -440,7 +440,7 @@ ul.task-list input[type="checkbox"] {
 
 // Footer
 footer.fixed-bottom {
-  background-color: var(--global-theme-color);
+  background-color: transparent;
   font-size: 0.75rem;
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
@@ -452,39 +452,39 @@ footer.fixed-bottom {
   }
 
   .container {
-    color: white;
+    color: var(--global-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
   }
 
   a {
-    color: white;
+    color: var(--global-text-color);
 
     &:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--global-text-color-light);
       text-decoration: none;
     }
   }
 }
 
 footer.sticky-bottom {
-  background-color: var(--global-theme-color);
+  background-color: transparent;
   border-top: 1px solid var(--global-divider-color);
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
 
   .container {
-    color: white;
+    color: var(--global-text-color);
     text-align: center;
   }
   
   a {
-    color: white;
+    color: var(--global-text-color);
 
     &:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--global-text-color-light);
       text-decoration: none;
     }
   }
@@ -1509,7 +1509,7 @@ ninja-keys::part(ninja-input-wrapper) {
 // News container scrollbar styling
 .news-container {
   scrollbar-width: thin;
-  scrollbar-color: var(--global-theme-color) var(--global-bg-color);
+  scrollbar-color: var(--global-text-color-light) var(--global-bg-color);
 }
 
 .news-container::-webkit-scrollbar {
@@ -1522,13 +1522,13 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 .news-container::-webkit-scrollbar-thumb {
-  background: var(--global-theme-color);
+  background: var(--global-text-color-light);
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 .news-container::-webkit-scrollbar-thumb:hover {
-  background: var(--global-hover-color);
+  background: var(--global-text-color);
 }
 
 // Add a subtle border to indicate scrollable area

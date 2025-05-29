@@ -117,41 +117,25 @@ html[data-theme="dark"] .identification {
   .page-sidebar:hover {
     width: auto;
     min-width: 200px;
-    background: rgba(var(--global-bg-color-rgb, 255, 255, 255), 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--global-bg-color);
     border-radius: 8px;
     padding: 16px;
     margin-left: -16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-left: 3px solid var(--global-theme-color);
+    border: 1px solid var(--global-divider-color);
   }
   
   html[data-theme="dark"] .page-sidebar:hover {
-    background: rgba(28, 28, 29, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: var(--global-bg-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
   }
   
   .page-sidebar:hover .sidebar-nav a {
     opacity: 1;
     pointer-events: auto;
-  }
-  
-  /* Add backdrop blur when hovering on medium screens */
-  .page-sidebar:hover::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
-    z-index: -1;
-    pointer-events: none;
-  }
-  
-  html[data-theme="dark"] .page-sidebar:hover::before {
-    background: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -196,17 +180,18 @@ html[data-theme="dark"] .identification {
   
   .page-sidebar:hover {
     border-left: 3px solid var(--global-theme-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    background: rgba(var(--global-bg-color-rgb, 255, 255, 255), 0.95);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: var(--global-bg-color);
     border-radius: 8px;
     padding: 16px;
     margin-left: -16px;
+    border: 1px solid var(--global-divider-color);
   }
   
   html[data-theme="dark"] .page-sidebar:hover {
-    background: rgba(28, 28, 29, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: var(--global-bg-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--global-divider-color);
   }
 }
 
@@ -227,7 +212,7 @@ html[data-theme="dark"] .identification {
 }
 
 .page-sidebar:hover .timeline-container::before {
-  background-color: var(--global-theme-color, #0366d6);
+  background-color: var(--global-theme-color);
 }
 
 .sidebar-nav {
@@ -269,37 +254,36 @@ html[data-theme="dark"] .identification {
 }
 
 .sidebar-nav li.active::before {
-  background-color: var(--global-theme-color, #0366d6);
-  box-shadow: 0 0 0 2px var(--global-theme-color, #0366d6);
+  background-color: var(--global-theme-color);
+  box-shadow: 0 0 0 2px var(--global-theme-color);
 }
 
 .page-sidebar:hover .sidebar-nav li::before {
-  box-shadow: 0 0 0 2px var(--global-theme-color, #0366d6);
+  box-shadow: 0 0 0 2px var(--global-theme-color);
 }
 
 .sidebar-nav a {
   display: block;
   padding: 0.25rem 0.5rem 0.25rem 1.5rem;
-  color: var(--global-text-color, #586069);
+  color: var(--global-text-color, #586069) !important;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
   margin-left: 0.5rem;
-  text-shadow: 0 0 3px var(--global-bg-color, rgba(255,255,255,0.8));
   border-radius: 4px;
 }
 
 .sidebar-nav a:hover {
-  color: var(--global-text-color, #24292e);
-  background: rgba(var(--global-theme-color-rgb, 3, 102, 214), 0.1);
+  color: var(--global-theme-color) !important;
+  background: rgba(var(--global-theme-color-rgb), 0.1) !important;
 }
 
 .sidebar-nav a.active {
-  color: var(--global-theme-color, #0366d6);
+  color: var(--global-theme-color) !important;
   font-weight: 600;
-  background: rgba(var(--global-theme-color-rgb, 3, 102, 214), 0.15);
+  background: rgba(var(--global-theme-color-rgb), 0.15) !important;
 }
 
 /* Dark mode specific styles */
@@ -320,7 +304,6 @@ html[data-theme="dark"] .identification {
   
   .sidebar-nav a {
     color: #f0f6fc;
-    text-shadow: 0 0 3px rgba(0,0,0,0.8);
   }
   
   .sidebar-nav a:hover {
@@ -345,11 +328,6 @@ html[data-theme="dark"] .sidebar-nav li.major::before {
 
 html[data-theme="dark"] .sidebar-nav a {
   color: #f0f6fc;
-  text-shadow: 0 0 3px rgba(0,0,0,0.8);
-}
-
-html[data-theme="dark"] .sidebar-nav a:hover {
-  color: #ffffff;
 }
 
 html[data-theme="dark"] .page-sidebar:hover {

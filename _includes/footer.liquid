@@ -1,10 +1,21 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
-      &copy; Copyright {{ site.time | date: '%Y' }}
-      {{ site.first_name }}
-      {{ site.middle_name }}
-      {{ site.last_name }}.
+      <div class="text-center">
+        &copy; Copyright {{ site.time | date: '%Y' }}
+        {{ site.first_name }}
+        {{ site.middle_name }}
+        {{ site.last_name }}. All rights reserved.
+        {% if site.last_updated %}
+          <br>
+          <small class="text-muted">Last updated: {{ site.time | date: '%B %d, %Y' }}</small>
+        {% endif %}
+        <br>
+        <small class="text-muted">
+          Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme.
+          Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+        </small>
+      </div>
     </div>
   </footer>
 {% else %}
@@ -14,10 +25,21 @@
     {% endif %}
 
     <div class="container">
-      &copy; Copyright {{ site.time | date: '%Y' }}
-      {{ site.first_name }}
-      {{ site.middle_name }}
-      {{ site.last_name }}.
+      <div class="text-center">
+        &copy; Copyright {{ site.time | date: '%Y' }}
+        {{ site.first_name }}
+        {{ site.middle_name }}
+        {{ site.last_name }}. All rights reserved.
+        {% if site.last_updated %}
+          <br>
+          <small class="text-muted">Last updated: {{ site.time | date: '%B %d, %Y' }}</small>
+        {% endif %}
+        <br>
+        <small class="text-muted">
+          Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme.
+          Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+        </small>
+      </div>
     </div>
   </footer>
 {% endif %}

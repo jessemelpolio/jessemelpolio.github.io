@@ -49,4 +49,4 @@ My goal is to develop adaptive and trustworthy learning systems that **adapt con
 
 I am currently on the job market for tenure-track faculty, postdoctoral, and research scientist positions beginning in around early 2026. Feel free to reach out if our interests align.
 
-More about me: [CV](/cv/) · [Google Scholar](https://scholar.google.com/citations?user=nD6_ot4AAAAJ)
+More about me: [CV](https://drive.google.com/file/d/1wdcrFzYb90GNO4r5h2yNIT-63YO5kWVZ/view?usp=share_link) · [Google Scholar](https://scholar.google.com/citations?user=nD6_ot4AAAAJ)

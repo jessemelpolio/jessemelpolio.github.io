@@ -24,19 +24,22 @@ Welcome! I'm currently a final year Ph.D. candidate at the [University of Illino
 <!-- My research lies at the intersection of  -->
 <!-- <b>continual and dynamic learning</b>, <b>multimodal learning</b>, and  -->
 <!-- <b>controllable image synthesis</b>.  -->
-My goal is to develop adaptive and trustworthy learning systems that **adapt continuously**, **reason across modalities**, and **remain under human control**.
+<!-- My goal is to develop adaptive and trustworthy learning systems that **adapt continuously**, **reason across modalities**, and **remain under human control**.
+ -->
+My <b>research goal</b> is to close the loop between perception and creation by building on device multimodal models that learn a concept from few interactions and quickly reuse that knowledge to recognize, reason, and reshape the visual world.
 
 ### Research Focus
 {: #research-focus}
 - **Continual & Dynamic Learning** — algorithms that update models in real time without forgetting.  
 - **Multimodal Models** — factual and grounded large multimodal models that integrate images, text, video, etc.  
-- **Controllable Image Synthesis** — autoregressive/diffusion-based models for fast, precise and user-directed editing.
+- **Controllable Synthesis** — autoregressive/diffusion-based models for fast, precise and user-directed editing.
+- **Visual Recognition** — models for fundamental visual understanding, such as object detection and segmentation.
 
-### Recent Highlights
+<!-- ### Recent Highlights
 {: #recent-highlights}
 - **Forgetting in large multimodal models.** New work shows that tuning a small set of layers in a LMM adds skills with almost no forgetting and zero past data.
 - **Anytime Continual Learning** lets open-vocabulary classifiers absorb new examples in milliseconds while retaining zero-shot scope.
-- **Instant/geometry-aware diffusion editing** enables few-step, training-free image manipulation on edge devices.  
+- **Instant/geometry-aware diffusion editing** enables few-step, training-free image manipulation on edge devices.   -->
 
 
 <!-- <span style="font-weight: 300; font-size: 1.1em;">My current research interests include creating <b>efficient and dynamic learning systems</b>, <b>vision-language models</b>, <b>generative models</b>, and more.</span> -->

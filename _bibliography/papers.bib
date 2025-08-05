@@ -38,22 +38,25 @@
 }
 
 @article{zhu2025training,
-  abbr={Under Review},
+  abbr={ICCV},
   title={Training-Free Geometric Image Editing on Diffusion Models},
   author={Zhu, Hanshen and Zhu, Zhen and Zhang, Kaile and Gong, Yiming and Liu, Yuliang and Bai, Xiang},
-  journal={Under review},
+  journal={ICCV},
   year={2025},
   category={Image Generation},
   additional_info={*Joint first author},
   abstract={We tackle the problem of geometric image editing, where an object within an image is repositioned, reoriented, or reshaped while preserving overall scene coherence. Previous diffusion-based editing methods often attempt to handle all relevant subtasks in a single step, which proves difficult when transformations become large or structurally complex. We address this by proposing a decoupled pipeline that separates object transformation, source region inpainting, and target region refinement. Both inpainting and refinement are implemented using a training-free diffusion approach, FreeFine. In experiments on our new GeoBench benchmark, which contains both 2D and 3D editing scenarios, FreeFine outperforms state-of-the-art alternatives in image fidelity and edit precision, especially under demanding transformations.},
-  bibtex_show={true}
+  bibtex_show={true},
+  html={https://www.arxiv.org/abs/2507.23300},
+  code={https://github.com/CIawevy/FreeFine},
+  preview={https://s2.loli.net/2025/08/05/htIZvles9pjfg5E.png}
 }
 
 @article{gong2025instantedit,
-  abbr={Under Review},
+  abbr={ICCV},
   title={InstantEdit: Text-Guided Few-Step Image Editing with Piecewise Rectified Flow},
   author={Gong, Yiming and Zhu, Zhen and Zhang, Minjia},
-  journal={Under review},
+  journal={ICCV},
   year={2025},
   category={Image Generation},
   abstract={We aim to tackle the challenge of fast text-guided image editing using diffusion models. The goal of this task is to perform a 4-step editing process on the image which closely follows the textual instruction while preserves vital information in the original image. We approach this challenge by revising on the two important steps in image editing, inversion and regeneration. Inspired by the formulation of RectifiedFlow based model, we design an inversion method, PerRFI, for this framework which induces less trajectory error during inversion. We further introduce a disentangled prompt guidance method, DPG, that controls image editability while providing better detail preservation than counterpart guidance strategy. Finally, we introduce ControlNet into the generation process using canny image as condition. This method helps to inject structural information into the model and also helps to remove distortions and artifacts. Our approach performs text-guided image editing in real-time, requiring only 8 numbers of functional evaluations (NFE), which takes 4 NFE in inversion and 4 NFE in generation. Our method is not only fast, but also achieves better qualitative and quantitative results comparing to other few-step methods.},

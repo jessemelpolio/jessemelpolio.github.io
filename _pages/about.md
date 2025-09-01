@@ -50,6 +50,6 @@ My <b>research goal</b> is to close the loop between perception and creation by 
 
 <!-- I'm excited about connecting with people and fostering innovative research especially in interdisciplinary fields such as <b>computer vision</b>, <b>cognitive science</b>, and <b>robotics</b>. -->
 
-I am currently on the job market research scientist/engineer positions beginning in late 2025 or early 2026. Please feel free to reach out if our interests align.
+I am currently on the **job market for research scientist/engineer positions** beginning in late 2025 or early 2026. Please feel free to reach out if our interests align.
 
 More about me: [CV](https://drive.google.com/file/d/1wdcrFzYb90GNO4r5h2yNIT-63YO5kWVZ/view?usp=share_link) · [Google Scholar](https://scholar.google.com/citations?user=nD6_ot4AAAAJ)

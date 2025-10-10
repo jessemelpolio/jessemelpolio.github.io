@@ -5,8 +5,11 @@
   journal={Under review},
   year={2025},
   category={Multimodal Learning, Continual/Dynamic Learning},
-  abstract={Large multimodal models (LMMs) are effective for many vision and language problems but may underperform in specialized domains such as object counting and clock reading. Fine-tuning improves target task performance but sacrifices generality, while retraining with an expanded dataset is expensive. We investigate how to teach LMMs new skills and domains, examining the effects of tuning different components and of multiple strategies to mitigate forgetting. We experiment by tuning on new target tasks singly or sequentially and measuring learning as target task performance and forgetting as held-out task performance. Surprisingly, we find that the self-attention projection layers in the language model of the tested LMM can be fine-tuned to learn without forgetting. Fine-tuning the MLP layers in the language model improves learning with much less forgetting than tuning the full model, and employing knowledge distillation regularization mitigates forgetting greatly. We will release code to foster reproducible research on continual adaptation of large multimodal models.},
+  abstract={How can we teach large multimodal models (LMMs) new skills without erasing prior abilities? We study sequential fine-tuning on five target skills while monitoring general ability on eight held-out benchmarks across three model families. We observe that apparent "forgetting" on held-out tasks after narrow fine-tuning can partly recover at later stages. We trace this behavior to a measurable shift in the output token distribution, manifested through a simple counting-bias probe that co-varies with forgetting. Guided by this picture, we identify two simple, robust tuning recipes that learn strongly while limiting drift: (i) updating only the self-attention projection layers, and (ii) updating only the MLP Gate&Up while freezing the Down projection. Across models and tasks, these choices deliver strong target gains while largely preserving held-out performance. },
   bibtex_show={true},
+  code={https://github.com/jessemelpolio/LMM_CL},
+  html={https://arxiv.org/abs/2510.08564},
+  preview={https://s2.loli.net/2025/10/10/p5cvDIPUJ2GSjTs.png},
   selected={true}
 }
 

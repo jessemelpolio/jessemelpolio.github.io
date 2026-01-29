@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Zhen Zhu",
-    "label": "Final-year CS Ph.D Candidate",
+    "label": "Researcher, Google DeepMind",
     "image": "",
     "email": "zhenzhu4@illinois.edu",
     "website": "https://zzhu.vision",
-    "summary": "A final-year CS Ph.D. candidate at the University of Illinois at Urbana-Champaign (UIUC), specializing in building intelligent systems for continual perception, recognition, understanding, and prediction. Research interests include efficient continual learning, personal AI agents, image generation, and the emerging properties of large models. Strong background in fundamental vision tasks such as object detection and semantic segmentation.",
+    "summary": "Researcher at Google DeepMind (joined Dec 2025) specializing in continual perception, recognition, understanding, and prediction. Previously completed a CS Ph.D. at the University of Illinois at Urbana-Champaign (UIUC). Research interests include efficient continual learning, personal AI agents, image generation, and emerging properties of large models, with a strong background in fundamental vision tasks such as object detection and semantic segmentation.",
     "location": {
       "address": "201 N. Goodwin Avenue, MC-258",
       "postalCode": "61801",

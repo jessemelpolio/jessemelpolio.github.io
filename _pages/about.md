@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 tagline: "Envision the whole of you."
-identification: "CS Ph.D. candidate at University of Illinois at Urbana-Champaign (UIUC)."
+identification: "Researcher at Google DeepMind; Ph.D. (CS) UIUC."
 
 profile:
   align: right
@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Welcome! I'm currently a final year Ph.D. candidate at the [University of Illinois at Urbana-Champaign (UIUC)](https://illinois.edu/), working with Professor [Derek Hoiem](https://dhoiem.cs.illinois.edu/). I received my Master's degree from [HUST](http://english.hust.edu.cn/) in June 2020, supervised by Professor [Xiang Bai](https://xbai.vlrlab.net). 
+Welcome! I'm a currently a researcher at **Google DeepMind**. I completed my Ph.D. in Computer Science at the [University of Illinois at Urbana-Champaign (UIUC)](https://illinois.edu/), advised by Professor [Derek Hoiem](https://dhoiem.cs.illinois.edu/). During my PhD, I focused on continual, multimodal, and controllable visual learning. I received my Master's degree from [HUST](http://english.hust.edu.cn/) in June 2020, supervised by Professor [Xiang Bai](https://xbai.vlrlab.net). 
 
 <!-- Prior to that, I obtained my Bachelor's degree from the School of Computer Science and Technology, HUST in 2017.  -->
 
@@ -26,7 +26,7 @@ Welcome! I'm currently a final year Ph.D. candidate at the [University of Illino
 <!-- <b>controllable image synthesis</b>.  -->
 <!-- My goal is to develop adaptive and trustworthy learning systems that **adapt continuously**, **reason across modalities**, and **remain under human control**.
  -->
-My <b>research goal</b> is to close the loop between perception and creation by building on device multimodal models that learn a concept from few interactions and quickly reuse that knowledge to recognize, reason, and reshape the visual world.
+<!-- My <b>research goal</b> is to close the loop between perception and creation by building on device multimodal models that learn a concept from few interactions and quickly reuse that knowledge to recognize, reason, and reshape the visual world. -->
 
 ### Research Focus
 {: #research-focus}
@@ -50,6 +50,6 @@ My <b>research goal</b> is to close the loop between perception and creation by 
 
 <!-- I'm excited about connecting with people and fostering innovative research especially in interdisciplinary fields such as <b>computer vision</b>, <b>cognitive science</b>, and <b>robotics</b>. -->
 
-I am currently on the **job market for research scientist/engineer positions** beginning in late 2025 or early 2026. Please feel free to reach out if our interests align.
+Always happy to chat about ideas, research, AI, and collaborations—feel free to reach out.
 
 More about me: [CV](https://drive.google.com/file/d/1wdcrFzYb90GNO4r5h2yNIT-63YO5kWVZ/view?usp=share_link) · [Google Scholar](https://scholar.google.com/citations?user=nD6_ot4AAAAJ)
